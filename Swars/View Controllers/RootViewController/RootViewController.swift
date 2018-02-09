@@ -21,10 +21,10 @@ class RootViewController: UITabBarController {
     
     func setupViewControllers() {
         let peopleViewController = PeopleViewController()
-        peopleViewController.tabBarItem = UITabBarItem(title: "Star Wars People", image: nil, tag: 0)
+        peopleViewController.tabBarItem = UITabBarItem(title: "Star Wars People", image: UIImage(named: "star_wars_people"), tag: 0)
         
         let aboutViewController = AboutViewController()
-        aboutViewController.tabBarItem = UITabBarItem(title: "About", image: nil, tag: 1)
+        aboutViewController.tabBarItem = UITabBarItem(title: "About", image: UIImage(named: "about"), tag: 1)
         
         let viewControllerList = [peopleViewController, aboutViewController]
         
