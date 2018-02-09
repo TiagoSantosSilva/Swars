@@ -28,6 +28,8 @@ class RootViewController: UITabBarController {
         
         let viewControllerList = [peopleViewController, aboutViewController]
         
-        viewControllers = viewControllerList
+        viewControllers = viewControllerList.map {
+            UINavigationController(rootViewController: $0)
+        }
     }
 }

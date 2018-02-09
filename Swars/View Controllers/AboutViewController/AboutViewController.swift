@@ -15,4 +15,11 @@ class AboutViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Setups
+    
+    override func setupView() {
+        super.setupView()
+        title = "About"
+    }
 }

@@ -20,5 +20,12 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+    
+    // MARK: - Setups
+    
+    func setupView() {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
