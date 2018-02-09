@@ -20,6 +20,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.blackColor
         setupView()
     }
     
@@ -27,5 +28,14 @@ class BaseViewController: UIViewController {
     
     func setupView() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barTintColor = UIColor.darkGrayColor
+        
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: UIColor.white
+        ]
+        
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: UIColor.white
+        ]
     }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		278810F3202E0AA500064363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F2202E0AA500064363 /* BaseViewController.swift */; };
+		278810F6202E27C300064363 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F5202E27C300064363 /* UIColorExtension.swift */; };
+		278810FA202E2C7300064363 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F9202E2C7300064363 /* NavigationControllerExtension.swift */; };
 		27AF6C64202E014200F208DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF6C63202E014200F208DA /* AppDelegate.swift */; };
 		27AF6C6D202E014200F208DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AF6C6C202E014200F208DA /* Assets.xcassets */; };
 		27AF6C7D202E055100F208DA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF6C7B202E055100F208DA /* RootViewController.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		278810F2202E0AA500064363 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		278810F5202E27C300064363 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		278810F9202E2C7300064363 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		27AF6C60202E014200F208DA /* Swars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AF6C63202E014200F208DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27AF6C6C202E014200F208DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +63,15 @@
 			path = "Base View Controller";
 			sourceTree = "<group>";
 		};
+		278810F4202E27B700064363 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				278810F5202E27C300064363 /* UIColorExtension.swift */,
+				278810F9202E2C7300064363 /* NavigationControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		27AF6C57202E014200F208DA = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 		27AF6C62202E014200F208DA /* Swars */ = {
 			isa = PBXGroup;
 			children = (
+				278810F4202E27B700064363 /* Extensions */,
 				27AF6C77202E049B00F208DA /* Application Delegate */,
 				27AF6C78202E04A400F208DA /* Models */,
 				278810F0202E09F900064363 /* Resources */,
@@ -224,8 +238,10 @@
 				278810F3202E0AA500064363 /* BaseViewController.swift in Sources */,
 				27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */,
 				27AF6C84202E070100F208DA /* PeopleViewController.swift in Sources */,
+				278810FA202E2C7300064363 /* NavigationControllerExtension.swift in Sources */,
 				27AF6C64202E014200F208DA /* AppDelegate.swift in Sources */,
 				27AF6C7D202E055100F208DA /* RootViewController.swift in Sources */,
+				278810F6202E27C300064363 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

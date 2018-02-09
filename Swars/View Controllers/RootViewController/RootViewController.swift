@@ -14,10 +14,15 @@ class RootViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewControllers()
+        setupView()
     }
     
     // MARK: - Setups
+    
+    func setupView() {
+        setupViewControllers()
+        setupTabBar()
+    }
     
     func setupViewControllers() {
         let peopleViewController = PeopleViewController()
@@ -31,5 +36,9 @@ class RootViewController: UITabBarController {
         viewControllers = viewControllerList.map {
             UINavigationController(rootViewController: $0)
         }
+    }
+    
+    func setupTabBar() {
+        tabBar.barTintColor = UIColor.darkGrayColor
     }
 }

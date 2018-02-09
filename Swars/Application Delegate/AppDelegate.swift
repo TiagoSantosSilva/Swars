@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.tintColor = UIColor(red: 234/255, green: 150/255, blue: 72/255, alpha: 1.0)
+        window?.tintColor = UIColor.orangeColor
         let rootViewController = RootViewController()
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
