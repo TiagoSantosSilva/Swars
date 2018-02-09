@@ -1,5 +1,5 @@
 //
-//  PeopleViewController.swift
+//  BaseViewController.swift
 //  Swars
 //
 //  Created by Tiago Santos on 09/02/18.
@@ -8,8 +8,14 @@
 
 import UIKit
 
-class PeopleViewController: BaseViewController {
+class BaseViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
