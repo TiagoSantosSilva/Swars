@@ -29,6 +29,7 @@ struct StarWarsNetwork: StarWarsNetworkProtocol {
     // MARK: - Methods
     
     func getStarWarsPersonInformation(with identifier: String) -> Observable<Data> {
+        
         return provider.rx
             .request(.getPerson(id: identifier))
             .debug()
@@ -39,6 +40,8 @@ struct StarWarsNetwork: StarWarsNetworkProtocol {
     }
     
     func getStarWarsPeople(with identifier: String) -> Observable<Data> {
+        let x = provider.rx.request(.getPeoplePage(number: "1"))
+        
         return provider.rx
             .request(.getPeoplePage(number: identifier))
             .debug()

@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum StarWarsAPI {
-    case getPeoplePage(number: String)
+    case getPeoplePage(number: String?)
     case getPerson(id: String)
 }
 
@@ -27,7 +27,7 @@ extension StarWarsAPI: TargetType {
     var path: String {
         switch self {
         case .getPeoplePage(let number):
-            return "people/?page=\(number)/"
+            return "people"
         case .getPerson(let id):
             return "people/\(id)/"
         }
@@ -46,7 +46,11 @@ extension StarWarsAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .getPeoplePage, .getPerson:
+        case .getPeoplePage(let page):
+            var params: [String: Any] = [:]
+            params["page"] = page
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+        default:
             return .requestPlain
         }
     }
@@ -66,6 +70,15 @@ extension StarWarsAPI: TargetType {
     
     var headers: [String : String]? {
         return nil
+    }
+    
+    // MARK: - Parameter Encoding
+    
+    var parameterEncoding: ParameterEncoding {
+        switch self {
+        default:
+            return URLEncoding.default
+        }
     }
 }
 
