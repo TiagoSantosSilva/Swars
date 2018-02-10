@@ -22,6 +22,11 @@
 		27AF6C85202E070100F208DA /* PeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27AF6C83202E070100F208DA /* PeopleViewController.xib */; };
 		27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF6C86202E070C00F208DA /* AboutViewController.swift */; };
 		27AF6C89202E070C00F208DA /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27AF6C87202E070C00F208DA /* AboutViewController.xib */; };
+		27C457ED202F3646005A5AC6 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */; };
+		27C457EF202F3877005A5AC6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457EE202F3877005A5AC6 /* StringExtension.swift */; };
+		27C457F1202F39B7005A5AC6 /* StarWarsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */; };
+		27C457F3202F3BF7005A5AC6 /* DataDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */; };
+		27C457F5202F3C66005A5AC6 /* DataDependencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F4202F3C66005A5AC6 /* DataDependencyProtocol.swift */; };
 		27E5875F202E5ED7003E3138 /* ReachabilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */; };
 		27E58764202E6E49003E3138 /* NoConnectivityViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E58763202E6E49003E3138 /* NoConnectivityViewViewModel.swift */; };
 		27E58767202E7270003E3138 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E58766202E7270003E3138 /* BaseViewModel.swift */; };
@@ -46,6 +51,11 @@
 		27AF6C83202E070100F208DA /* PeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewController.xib; sourceTree = "<group>"; };
 		27AF6C86202E070C00F208DA /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		27AF6C87202E070C00F208DA /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		27C457EE202F3877005A5AC6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsNetwork.swift; sourceTree = "<group>"; };
+		27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDependencies.swift; sourceTree = "<group>"; };
+		27C457F4202F3C66005A5AC6 /* DataDependencyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDependencyProtocol.swift; sourceTree = "<group>"; };
 		27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityProtocol.swift; sourceTree = "<group>"; };
 		27E58763202E6E49003E3138 /* NoConnectivityViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectivityViewViewModel.swift; sourceTree = "<group>"; };
 		27E58766202E7270003E3138 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +141,7 @@
 				278810F5202E27C300064363 /* UIColorExtension.swift */,
 				278810F9202E2C7300064363 /* NavigationControllerExtension.swift */,
 				27437256202E7949003855A7 /* UIViewControllerExtension.swift */,
+				27C457EE202F3877005A5AC6 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -156,6 +167,7 @@
 		27AF6C62202E014200F208DA /* Swars */ = {
 			isa = PBXGroup;
 			children = (
+				27C457EB202F3635005A5AC6 /* Network */,
 				27437252202E78F6003855A7 /* Animations */,
 				27E5875D202E5EC9003E3138 /* Protocols */,
 				278810F4202E27B700064363 /* Extensions */,
@@ -230,10 +242,21 @@
 			path = AboutViewController;
 			sourceTree = "<group>";
 		};
+		27C457EB202F3635005A5AC6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */,
+				27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */,
+				27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		27E5875D202E5EC9003E3138 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */,
+				27C457F4202F3C66005A5AC6 /* DataDependencyProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -369,11 +392,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Swars/Pods-Swars-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -403,7 +436,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */,
+				27C457F1202F39B7005A5AC6 /* StarWarsNetwork.swift in Sources */,
 				27E58767202E7270003E3138 /* BaseViewModel.swift in Sources */,
+				27C457EF202F3877005A5AC6 /* StringExtension.swift in Sources */,
 				278810F3202E0AA500064363 /* BaseViewController.swift in Sources */,
 				27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */,
 				27AF6C84202E070100F208DA /* PeopleViewController.swift in Sources */,
@@ -411,9 +446,12 @@
 				27AF6C64202E014200F208DA /* AppDelegate.swift in Sources */,
 				27AF6C7D202E055100F208DA /* RootViewController.swift in Sources */,
 				278810F6202E27C300064363 /* UIColorExtension.swift in Sources */,
+				27C457ED202F3646005A5AC6 /* StarWarsAPI.swift in Sources */,
 				27437257202E7949003855A7 /* UIViewControllerExtension.swift in Sources */,
 				27E5875F202E5ED7003E3138 /* ReachabilityProtocol.swift in Sources */,
 				27437255202E7917003855A7 /* FadeTransition.swift in Sources */,
+				27C457F3202F3BF7005A5AC6 /* DataDependencies.swift in Sources */,
+				27C457F5202F3C66005A5AC6 /* DataDependencyProtocol.swift in Sources */,
 				27E58764202E6E49003E3138 /* NoConnectivityViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

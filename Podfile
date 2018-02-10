@@ -8,6 +8,9 @@ target 'Swars' do
   use_frameworks!
 
   # Pods for Swars
+  pod 'Moya/RxSwift'
   pod 'ReachabilitySwift'
-
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
 end
