@@ -9,7 +9,7 @@
 import UIKit
 import Reachability
 
-protocol NoConnectivityDelegate {
+protocol NoConnectivityViewControllerDelegate {
     func connectivityWasObtained()
 }
 
@@ -39,9 +39,9 @@ class NoConnectivityViewController: UIViewController {
     }
 }
 
-extension NoConnectivityViewController: NoConnectivityDelegate {
+extension NoConnectivityViewController: NoConnectivityViewControllerDelegate {
     func connectivityWasObtained() {
-        self.dismiss(animated: true, completion: nil)
+        dismissWithFadeTransition()
     }
 }
 

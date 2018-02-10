@@ -17,11 +17,11 @@ class NoConnectivityViewViewModel {
     
     // MARK: - Delegates
     
-    private var delegate: NoConnectivityDelegate?
+    private var delegate: NoConnectivityViewControllerDelegate?
     
     // MARK: - Init
     
-    init(reachability: Reachability, noConnectivityDelegate: NoConnectivityDelegate) {
+    init(reachability: Reachability, noConnectivityDelegate: NoConnectivityViewControllerDelegate) {
         self.reachability = reachability
         self.delegate = noConnectivityDelegate
         

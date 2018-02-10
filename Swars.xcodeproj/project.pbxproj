@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27437255202E7917003855A7 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437254202E7917003855A7 /* FadeTransition.swift */; };
+		27437257202E7949003855A7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437256202E7949003855A7 /* UIViewControllerExtension.swift */; };
 		27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27798060202E55F80085CFDF /* NoConnectivityViewController.swift */; };
 		27798063202E55F80085CFDF /* NoConnectivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27798061202E55F80085CFDF /* NoConnectivityViewController.xib */; };
 		278810F3202E0AA500064363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F2202E0AA500064363 /* BaseViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27437254202E7917003855A7 /* FadeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		27437256202E7949003855A7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		27798060202E55F80085CFDF /* NoConnectivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectivityViewController.swift; sourceTree = "<group>"; };
 		27798061202E55F80085CFDF /* NoConnectivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoConnectivityViewController.xib; sourceTree = "<group>"; };
 		278810F2202E0AA500064363 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		27437252202E78F6003855A7 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				27437253202E790E003855A7 /* Transitions */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		27437253202E790E003855A7 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				27437254202E7917003855A7 /* FadeTransition.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		2779805F202E55D70085CFDF /* No Connectivity View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +130,7 @@
 			children = (
 				278810F5202E27C300064363 /* UIColorExtension.swift */,
 				278810F9202E2C7300064363 /* NavigationControllerExtension.swift */,
+				27437256202E7949003855A7 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -135,6 +156,7 @@
 		27AF6C62202E014200F208DA /* Swars */ = {
 			isa = PBXGroup;
 			children = (
+				27437252202E78F6003855A7 /* Animations */,
 				27E5875D202E5EC9003E3138 /* Protocols */,
 				278810F4202E27B700064363 /* Extensions */,
 				27AF6C77202E049B00F208DA /* Application Delegate */,
@@ -389,7 +411,9 @@
 				27AF6C64202E014200F208DA /* AppDelegate.swift in Sources */,
 				27AF6C7D202E055100F208DA /* RootViewController.swift in Sources */,
 				278810F6202E27C300064363 /* UIColorExtension.swift in Sources */,
+				27437257202E7949003855A7 /* UIViewControllerExtension.swift in Sources */,
 				27E5875F202E5ED7003E3138 /* ReachabilityProtocol.swift in Sources */,
+				27437255202E7917003855A7 /* FadeTransition.swift in Sources */,
 				27E58764202E6E49003E3138 /* NoConnectivityViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
