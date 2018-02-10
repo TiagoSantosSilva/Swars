@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="Swars" customModuleProvider="target">
+            <connections>
+                <outlet property="informationTableView" destination="4yC-hX-SSv" id="mjj-yB-sKC"/>
+                <outlet property="profileImageView" destination="zAX-X8-GhJ" id="qoT-Em-ZHB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crash_bandicoot" translatesAutoresizingMaskIntoConstraints="NO" id="zAX-X8-GhJ" customClass="ProfileImageView" customModule="Swars" customModuleProvider="target">
+                    <rect key="frame" x="112.66666666666669" y="124" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="6v6-lx-Gas"/>
+                        <constraint firstAttribute="height" constant="150" id="RIL-qq-SEK"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4yC-hX-SSv">
+                    <rect key="frame" x="0.0" y="344" width="375" height="434"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zAX-X8-GhJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="R3j-ww-J88"/>
+                <constraint firstItem="4yC-hX-SSv" firstAttribute="top" secondItem="zAX-X8-GhJ" secondAttribute="bottom" constant="70" id="Ucg-Yi-Prw"/>
+                <constraint firstItem="4yC-hX-SSv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jra-IP-TWu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4yC-hX-SSv" secondAttribute="trailing" id="kN6-0G-rVO"/>
+                <constraint firstItem="zAX-X8-GhJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wIh-TQ-bUt"/>
+                <constraint firstItem="4yC-hX-SSv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="yjw-x6-kz1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="25.5" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="crash_bandicoot" width="293" height="258"/>
+    </resources>
+</document>
