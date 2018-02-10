@@ -10,6 +10,15 @@ import UIKit
 
 class AboutViewController: BaseViewController {
 
+    // MARK: - IB Outlets
+    
+    @IBOutlet weak var profileImageView: ProfileImageView!
+    @IBOutlet weak var informationTableView: UITableView!
+    
+    // MARK: - View Model
+    
+    private var aboutViewModel: AboutViewModel!
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
