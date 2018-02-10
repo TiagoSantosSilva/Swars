@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27798060202E55F80085CFDF /* NoConnectivityViewController.swift */; };
+		27798063202E55F80085CFDF /* NoConnectivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27798061202E55F80085CFDF /* NoConnectivityViewController.xib */; };
 		278810F3202E0AA500064363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F2202E0AA500064363 /* BaseViewController.swift */; };
 		278810F6202E27C300064363 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F5202E27C300064363 /* UIColorExtension.swift */; };
 		278810FA202E2C7300064363 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F9202E2C7300064363 /* NavigationControllerExtension.swift */; };
@@ -18,9 +20,13 @@
 		27AF6C85202E070100F208DA /* PeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27AF6C83202E070100F208DA /* PeopleViewController.xib */; };
 		27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF6C86202E070C00F208DA /* AboutViewController.swift */; };
 		27AF6C89202E070C00F208DA /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27AF6C87202E070C00F208DA /* AboutViewController.xib */; };
+		27E5875F202E5ED7003E3138 /* ReachabilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */; };
+		5418CEFA44ED08C03AD58204 /* Pods_Swars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B36DA01CE2843B3D8FFAF7 /* Pods_Swars.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27798060202E55F80085CFDF /* NoConnectivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectivityViewController.swift; sourceTree = "<group>"; };
+		27798061202E55F80085CFDF /* NoConnectivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoConnectivityViewController.xib; sourceTree = "<group>"; };
 		278810F2202E0AA500064363 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		278810F5202E27C300064363 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		278810F9202E2C7300064363 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
@@ -34,6 +40,10 @@
 		27AF6C83202E070100F208DA /* PeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewController.xib; sourceTree = "<group>"; };
 		27AF6C86202E070C00F208DA /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		27AF6C87202E070C00F208DA /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityProtocol.swift; sourceTree = "<group>"; };
+		38B36DA01CE2843B3D8FFAF7 /* Pods_Swars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		610B93CC254E7F765A0E2A0C /* Pods-Swars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swars.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swars/Pods-Swars.release.xcconfig"; sourceTree = "<group>"; };
+		E07F3B5ACCDA172D2F983136 /* Pods-Swars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swars.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swars/Pods-Swars.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +51,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5418CEFA44ED08C03AD58204 /* Pods_Swars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B1AAC0E025D5727C475AE30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E07F3B5ACCDA172D2F983136 /* Pods-Swars.debug.xcconfig */,
+				610B93CC254E7F765A0E2A0C /* Pods-Swars.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1576A539FD523980F0065A86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38B36DA01CE2843B3D8FFAF7 /* Pods_Swars.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2779805F202E55D70085CFDF /* No Connectivity View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27798060202E55F80085CFDF /* NoConnectivityViewController.swift */,
+				27798061202E55F80085CFDF /* NoConnectivityViewController.xib */,
+			);
+			path = "No Connectivity View Controller";
+			sourceTree = "<group>";
+		};
 		278810F0202E09F900064363 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +114,8 @@
 			children = (
 				27AF6C62202E014200F208DA /* Swars */,
 				27AF6C61202E014200F208DA /* Products */,
+				0B1AAC0E025D5727C475AE30 /* Pods */,
+				1576A539FD523980F0065A86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +130,7 @@
 		27AF6C62202E014200F208DA /* Swars */ = {
 			isa = PBXGroup;
 			children = (
+				27E5875D202E5EC9003E3138 /* Protocols */,
 				278810F4202E27B700064363 /* Extensions */,
 				27AF6C77202E049B00F208DA /* Application Delegate */,
 				27AF6C78202E04A400F208DA /* Models */,
@@ -119,6 +159,7 @@
 		27AF6C79202E04A800F208DA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2779805F202E55D70085CFDF /* No Connectivity View Controller */,
 				278810F1202E0A9300064363 /* Base View Controller */,
 				27AF6C81202E06EA00F208DA /* AboutViewController */,
 				27AF6C80202E06E100F208DA /* PeopleViewController */,
@@ -162,6 +203,14 @@
 			path = AboutViewController;
 			sourceTree = "<group>";
 		};
+		27E5875D202E5EC9003E3138 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27AF6C74202E014200F208DA /* Build configuration list for PBXNativeTarget "Swars" */;
 			buildPhases = (
+				7804EAE83688B025816CAC6C /* [CP] Check Pods Manifest.lock */,
 				27AF6C5C202E014200F208DA /* Sources */,
 				27AF6C5D202E014200F208DA /* Frameworks */,
 				27AF6C5E202E014200F208DA /* Resources */,
+				8A0527A2AE9999C0F7BBE336 /* [CP] Embed Pods Frameworks */,
+				CE694AA2D54535A9B483D2F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,6 +275,7 @@
 			files = (
 				27AF6C6D202E014200F208DA /* Assets.xcassets in Resources */,
 				27AF6C85202E070100F208DA /* PeopleViewController.xib in Resources */,
+				27798063202E55F80085CFDF /* NoConnectivityViewController.xib in Resources */,
 				27AF6C7E202E055100F208DA /* RootViewController.xib in Resources */,
 				27AF6C89202E070C00F208DA /* AboutViewController.xib in Resources */,
 			);
@@ -230,11 +283,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7804EAE83688B025816CAC6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swars-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A0527A2AE9999C0F7BBE336 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Swars/Pods-Swars-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swars/Pods-Swars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE694AA2D54535A9B483D2F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swars/Pods-Swars-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27AF6C5C202E014200F208DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */,
 				278810F3202E0AA500064363 /* BaseViewController.swift in Sources */,
 				27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */,
 				27AF6C84202E070100F208DA /* PeopleViewController.swift in Sources */,
@@ -242,6 +350,7 @@
 				27AF6C64202E014200F208DA /* AppDelegate.swift in Sources */,
 				27AF6C7D202E055100F208DA /* RootViewController.swift in Sources */,
 				278810F6202E27C300064363 /* UIColorExtension.swift in Sources */,
+				27E5875F202E5ED7003E3138 /* ReachabilityProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +466,7 @@
 		};
 		27AF6C75202E014200F208DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E07F3B5ACCDA172D2F983136 /* Pods-Swars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +482,7 @@
 		};
 		27AF6C76202E014200F208DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 610B93CC254E7F765A0E2A0C /* Pods-Swars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

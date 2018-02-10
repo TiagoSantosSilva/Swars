@@ -18,8 +18,8 @@ class AboutViewController: BaseViewController {
     
     // MARK: - Setups
     
-    override func setupView() {
-        super.setupView()
+    override func setupViewController() {
+        super.setupViewController()
         title = "About"
     }
 }
