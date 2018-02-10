@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		27437255202E7917003855A7 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437254202E7917003855A7 /* FadeTransition.swift */; };
 		27437257202E7949003855A7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437256202E7949003855A7 /* UIViewControllerExtension.swift */; };
+		274BB1C6202FB0520085E868 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BB1C5202FB0520085E868 /* Species.swift */; };
 		27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27798060202E55F80085CFDF /* NoConnectivityViewController.swift */; };
 		27798063202E55F80085CFDF /* NoConnectivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27798061202E55F80085CFDF /* NoConnectivityViewController.xib */; };
 		278810F3202E0AA500064363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F2202E0AA500064363 /* BaseViewController.swift */; };
@@ -37,6 +38,14 @@
 		27C45809202F5016005A5AC6 /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C45807202F5016005A5AC6 /* PersonCell.xib */; };
 		27C4580B202F5510005A5AC6 /* PersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4580A202F5510005A5AC6 /* PersonCellViewModel.swift */; };
 		27C4580D202F55E4005A5AC6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4580C202F55E4005A5AC6 /* Person.swift */; };
+		27C45816202F57FF005A5AC6 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45815202F57FF005A5AC6 /* PeopleViewModel.swift */; };
+		27C45818202F777F005A5AC6 /* PeoplePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45817202F777F005A5AC6 /* PeoplePage.swift */; };
+		27C4581A202F9006005A5AC6 /* Roundable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45819202F9006005A5AC6 /* Roundable.swift */; };
+		27C4581D202F9045005A5AC6 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4581C202F9045005A5AC6 /* ProfileImageView.swift */; };
+		27C45821202F976F005A5AC6 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4581F202F976F005A5AC6 /* AboutCell.swift */; };
+		27C45822202F976F005A5AC6 /* AboutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C45820202F976F005A5AC6 /* AboutCell.xib */; };
+		27C45824202F98EA005A5AC6 /* AboutCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45823202F98EA005A5AC6 /* AboutCellViewModel.swift */; };
+		27C45829202F99C8005A5AC6 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45828202F99C8005A5AC6 /* AboutViewModel.swift */; };
 		27E5875F202E5ED7003E3138 /* ReachabilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */; };
 		27E58764202E6E49003E3138 /* NoConnectivityViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E58763202E6E49003E3138 /* NoConnectivityViewViewModel.swift */; };
 		27E58767202E7270003E3138 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E58766202E7270003E3138 /* BaseViewModel.swift */; };
@@ -46,6 +55,7 @@
 /* Begin PBXFileReference section */
 		27437254202E7917003855A7 /* FadeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		27437256202E7949003855A7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		274BB1C5202FB0520085E868 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		27798060202E55F80085CFDF /* NoConnectivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectivityViewController.swift; sourceTree = "<group>"; };
 		27798061202E55F80085CFDF /* NoConnectivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoConnectivityViewController.xib; sourceTree = "<group>"; };
 		278810F2202E0AA500064363 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +86,14 @@
 		27C45807202F5016005A5AC6 /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
 		27C4580A202F5510005A5AC6 /* PersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModel.swift; sourceTree = "<group>"; };
 		27C4580C202F55E4005A5AC6 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		27C45815202F57FF005A5AC6 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		27C45817202F777F005A5AC6 /* PeoplePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePage.swift; sourceTree = "<group>"; };
+		27C45819202F9006005A5AC6 /* Roundable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roundable.swift; sourceTree = "<group>"; };
+		27C4581C202F9045005A5AC6 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		27C4581F202F976F005A5AC6 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
+		27C45820202F976F005A5AC6 /* AboutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutCell.xib; sourceTree = "<group>"; };
+		27C45823202F98EA005A5AC6 /* AboutCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCellViewModel.swift; sourceTree = "<group>"; };
+		27C45828202F99C8005A5AC6 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
 		27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityProtocol.swift; sourceTree = "<group>"; };
 		27E58763202E6E49003E3138 /* NoConnectivityViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectivityViewViewModel.swift; sourceTree = "<group>"; };
 		27E58766202E7270003E3138 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -217,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				27C4580C202F55E4005A5AC6 /* Person.swift */,
+				27C45817202F777F005A5AC6 /* PeoplePage.swift */,
+				274BB1C5202FB0520085E868 /* Species.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,8 +284,11 @@
 		27AF6C81202E06EA00F208DA /* About View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				27AF6C86202E070C00F208DA /* AboutViewController.swift */,
-				27AF6C87202E070C00F208DA /* AboutViewController.xib */,
+				27C45827202F99B5005A5AC6 /* XIB */,
+				27C45826202F99B0005A5AC6 /* View Controller */,
+				27C45825202F999B005A5AC6 /* View Models */,
+				27C4581E202F974D005A5AC6 /* About Cell */,
+				27C4581B202F902C005A5AC6 /* Profile Image */,
 			);
 			path = "About View Controller";
 			sourceTree = "<group>";
@@ -315,6 +338,7 @@
 		27C45810202F5754005A5AC6 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				27C45815202F57FF005A5AC6 /* PeopleViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -345,12 +369,55 @@
 			path = "Person Cell";
 			sourceTree = "<group>";
 		};
+		27C4581B202F902C005A5AC6 /* Profile Image */ = {
+			isa = PBXGroup;
+			children = (
+				27C4581C202F9045005A5AC6 /* ProfileImageView.swift */,
+			);
+			path = "Profile Image";
+			sourceTree = "<group>";
+		};
+		27C4581E202F974D005A5AC6 /* About Cell */ = {
+			isa = PBXGroup;
+			children = (
+				27C4581F202F976F005A5AC6 /* AboutCell.swift */,
+				27C45820202F976F005A5AC6 /* AboutCell.xib */,
+				27C45823202F98EA005A5AC6 /* AboutCellViewModel.swift */,
+			);
+			path = "About Cell";
+			sourceTree = "<group>";
+		};
+		27C45825202F999B005A5AC6 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				27C45828202F99C8005A5AC6 /* AboutViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		27C45826202F99B0005A5AC6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27AF6C86202E070C00F208DA /* AboutViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27C45827202F99B5005A5AC6 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				27AF6C87202E070C00F208DA /* AboutViewController.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
 		27E5875D202E5EC9003E3138 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				27C457F4202F3C66005A5AC6 /* DataDependencyProtocol.swift */,
 				27C457FD202F3E55005A5AC6 /* Identifiable.swift */,
 				27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */,
+				27C45819202F9006005A5AC6 /* Roundable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -450,6 +517,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C45822202F976F005A5AC6 /* AboutCell.xib in Resources */,
 				27AF6C6D202E014200F208DA /* Assets.xcassets in Resources */,
 				27AF6C85202E070100F208DA /* PeopleViewController.xib in Resources */,
 				27798063202E55F80085CFDF /* NoConnectivityViewController.xib in Resources */,
@@ -532,10 +600,13 @@
 			files = (
 				27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */,
 				27C457F1202F39B7005A5AC6 /* StarWarsNetwork.swift in Sources */,
+				27C45829202F99C8005A5AC6 /* AboutViewModel.swift in Sources */,
 				27C45808202F5016005A5AC6 /* PersonCell.swift in Sources */,
 				27C457FA202F3D75005A5AC6 /* Result.swift in Sources */,
 				27E58767202E7270003E3138 /* BaseViewModel.swift in Sources */,
+				27C45821202F976F005A5AC6 /* AboutCell.swift in Sources */,
 				27C457FE202F3E55005A5AC6 /* Identifiable.swift in Sources */,
+				274BB1C6202FB0520085E868 /* Species.swift in Sources */,
 				27C457EF202F3877005A5AC6 /* StringExtension.swift in Sources */,
 				278810F3202E0AA500064363 /* BaseViewController.swift in Sources */,
 				27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */,
@@ -548,13 +619,18 @@
 				27C4580D202F55E4005A5AC6 /* Person.swift in Sources */,
 				27C457FC202F3DF8005A5AC6 /* UITableViewExtension.swift in Sources */,
 				278810F6202E27C300064363 /* UIColorExtension.swift in Sources */,
+				27C45818202F777F005A5AC6 /* PeoplePage.swift in Sources */,
 				27C457ED202F3646005A5AC6 /* StarWarsAPI.swift in Sources */,
 				27437257202E7949003855A7 /* UIViewControllerExtension.swift in Sources */,
 				27C4580B202F5510005A5AC6 /* PersonCellViewModel.swift in Sources */,
 				27E5875F202E5ED7003E3138 /* ReachabilityProtocol.swift in Sources */,
 				27437255202E7917003855A7 /* FadeTransition.swift in Sources */,
+				27C4581A202F9006005A5AC6 /* Roundable.swift in Sources */,
 				27C457F3202F3BF7005A5AC6 /* DataDependencies.swift in Sources */,
+				27C4581D202F9045005A5AC6 /* ProfileImageView.swift in Sources */,
 				27C457F5202F3C66005A5AC6 /* DataDependencyProtocol.swift in Sources */,
+				27C45824202F98EA005A5AC6 /* AboutCellViewModel.swift in Sources */,
+				27C45816202F57FF005A5AC6 /* PeopleViewModel.swift in Sources */,
 				27E58764202E6E49003E3138 /* NoConnectivityViewViewModel.swift in Sources */,
 				27C45800202F3E72005A5AC6 /* UITableViewCellExtension.swift in Sources */,
 			);
