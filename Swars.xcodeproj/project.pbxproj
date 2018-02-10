@@ -28,6 +28,9 @@
 		27C457F3202F3BF7005A5AC6 /* DataDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */; };
 		27C457F5202F3C66005A5AC6 /* DataDependencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F4202F3C66005A5AC6 /* DataDependencyProtocol.swift */; };
 		27C457FA202F3D75005A5AC6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F9202F3D75005A5AC6 /* Result.swift */; };
+		27C457FC202F3DF8005A5AC6 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457FB202F3DF8005A5AC6 /* UITableViewExtension.swift */; };
+		27C457FE202F3E55005A5AC6 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457FD202F3E55005A5AC6 /* Identifiable.swift */; };
+		27C45800202F3E72005A5AC6 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457FF202F3E72005A5AC6 /* UITableViewCellExtension.swift */; };
 		27E5875F202E5ED7003E3138 /* ReachabilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */; };
 		27E58764202E6E49003E3138 /* NoConnectivityViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E58763202E6E49003E3138 /* NoConnectivityViewViewModel.swift */; };
 		27E58767202E7270003E3138 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E58766202E7270003E3138 /* BaseViewModel.swift */; };
@@ -58,6 +61,9 @@
 		27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDependencies.swift; sourceTree = "<group>"; };
 		27C457F4202F3C66005A5AC6 /* DataDependencyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDependencyProtocol.swift; sourceTree = "<group>"; };
 		27C457F9202F3D75005A5AC6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		27C457FB202F3DF8005A5AC6 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		27C457FD202F3E55005A5AC6 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		27C457FF202F3E72005A5AC6 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityProtocol.swift; sourceTree = "<group>"; };
 		27E58763202E6E49003E3138 /* NoConnectivityViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectivityViewViewModel.swift; sourceTree = "<group>"; };
 		27E58766202E7270003E3138 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -140,10 +146,12 @@
 		278810F4202E27B700064363 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				278810F5202E27C300064363 /* UIColorExtension.swift */,
 				278810F9202E2C7300064363 /* NavigationControllerExtension.swift */,
-				27437256202E7949003855A7 /* UIViewControllerExtension.swift */,
 				27C457EE202F3877005A5AC6 /* StringExtension.swift */,
+				278810F5202E27C300064363 /* UIColorExtension.swift */,
+				27C457FB202F3DF8005A5AC6 /* UITableViewExtension.swift */,
+				27437256202E7949003855A7 /* UIViewControllerExtension.swift */,
+				27C457FF202F3E72005A5AC6 /* UITableViewCellExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -169,9 +177,9 @@
 		27AF6C62202E014200F208DA /* Swars */ = {
 			isa = PBXGroup;
 			children = (
-				27C457F8202F3D5C005A5AC6 /* Enums */,
 				27437252202E78F6003855A7 /* Animations */,
 				27AF6C77202E049B00F208DA /* Application Delegate */,
+				27C457F8202F3D5C005A5AC6 /* Enums */,
 				278810F4202E27B700064363 /* Extensions */,
 				27AF6C78202E04A400F208DA /* Models */,
 				27C457EB202F3635005A5AC6 /* Network */,
@@ -266,8 +274,9 @@
 		27E5875D202E5EC9003E3138 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */,
 				27C457F4202F3C66005A5AC6 /* DataDependencyProtocol.swift */,
+				27C457FD202F3E55005A5AC6 /* Identifiable.swift */,
+				27E5875E202E5ED7003E3138 /* ReachabilityProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -450,6 +459,7 @@
 				27C457F1202F39B7005A5AC6 /* StarWarsNetwork.swift in Sources */,
 				27C457FA202F3D75005A5AC6 /* Result.swift in Sources */,
 				27E58767202E7270003E3138 /* BaseViewModel.swift in Sources */,
+				27C457FE202F3E55005A5AC6 /* Identifiable.swift in Sources */,
 				27C457EF202F3877005A5AC6 /* StringExtension.swift in Sources */,
 				278810F3202E0AA500064363 /* BaseViewController.swift in Sources */,
 				27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */,
@@ -457,6 +467,7 @@
 				278810FA202E2C7300064363 /* NavigationControllerExtension.swift in Sources */,
 				27AF6C64202E014200F208DA /* AppDelegate.swift in Sources */,
 				27AF6C7D202E055100F208DA /* RootViewController.swift in Sources */,
+				27C457FC202F3DF8005A5AC6 /* UITableViewExtension.swift in Sources */,
 				278810F6202E27C300064363 /* UIColorExtension.swift in Sources */,
 				27C457ED202F3646005A5AC6 /* StarWarsAPI.swift in Sources */,
 				27437257202E7949003855A7 /* UIViewControllerExtension.swift in Sources */,
@@ -465,6 +476,7 @@
 				27C457F3202F3BF7005A5AC6 /* DataDependencies.swift in Sources */,
 				27C457F5202F3C66005A5AC6 /* DataDependencyProtocol.swift in Sources */,
 				27E58764202E6E49003E3138 /* NoConnectivityViewViewModel.swift in Sources */,
+				27C45800202F3E72005A5AC6 /* UITableViewCellExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

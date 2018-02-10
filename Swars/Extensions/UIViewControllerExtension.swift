@@ -15,5 +15,4 @@ extension UIViewController {
         view.window!.layer.add(transition, forKey: nil)
         dismiss(animated: false, completion: nil)
     }
-    
 }
