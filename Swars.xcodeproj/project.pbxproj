@@ -226,8 +226,8 @@
 			children = (
 				2779805F202E55D70085CFDF /* No Connectivity View Controller */,
 				278810F1202E0A9300064363 /* Base View Controller */,
-				27AF6C81202E06EA00F208DA /* AboutViewController */,
-				27AF6C80202E06E100F208DA /* PeopleViewController */,
+				27AF6C81202E06EA00F208DA /* About View Controller */,
+				27AF6C80202E06E100F208DA /* People View Controller */,
 				27AF6C7F202E056200F208DA /* RootViewController */,
 			);
 			path = "View Controllers";
@@ -250,23 +250,24 @@
 			path = RootViewController;
 			sourceTree = "<group>";
 		};
-		27AF6C80202E06E100F208DA /* PeopleViewController */ = {
+		27AF6C80202E06E100F208DA /* People View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				27C45805202F4FCA005A5AC6 /* Cells */,
-				27AF6C82202E070100F208DA /* PeopleViewController.swift */,
-				27AF6C83202E070100F208DA /* PeopleViewController.xib */,
+				27C45812202F578F005A5AC6 /* View Controller */,
+				27C45810202F5754005A5AC6 /* View Models */,
+				27C45811202F5759005A5AC6 /* XIB */,
 			);
-			path = PeopleViewController;
+			path = "People View Controller";
 			sourceTree = "<group>";
 		};
-		27AF6C81202E06EA00F208DA /* AboutViewController */ = {
+		27AF6C81202E06EA00F208DA /* About View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				27AF6C86202E070C00F208DA /* AboutViewController.swift */,
 				27AF6C87202E070C00F208DA /* AboutViewController.xib */,
 			);
-			path = AboutViewController;
+			path = "About View Controller";
 			sourceTree = "<group>";
 		};
 		27C457EB202F3635005A5AC6 /* Network */ = {
@@ -290,11 +291,58 @@
 		27C45805202F4FCA005A5AC6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				27C45806202F5016005A5AC6 /* PersonCell.swift */,
-				27C45807202F5016005A5AC6 /* PersonCell.xib */,
-				27C4580A202F5510005A5AC6 /* PersonCellViewModel.swift */,
+				27C45813202F579C005A5AC6 /* Person Cell */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		27C4580E202F5738005A5AC6 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				27C4580A202F5510005A5AC6 /* PersonCellViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		27C4580F202F5746005A5AC6 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				27C45807202F5016005A5AC6 /* PersonCell.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		27C45810202F5754005A5AC6 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		27C45811202F5759005A5AC6 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				27AF6C83202E070100F208DA /* PeopleViewController.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		27C45812202F578F005A5AC6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27AF6C82202E070100F208DA /* PeopleViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27C45813202F579C005A5AC6 /* Person Cell */ = {
+			isa = PBXGroup;
+			children = (
+				27C4580F202F5746005A5AC6 /* XIB */,
+				27C4580E202F5738005A5AC6 /* View Models */,
+				27C45806202F5016005A5AC6 /* PersonCell.swift */,
+			);
+			path = "Person Cell";
 			sourceTree = "<group>";
 		};
 		27E5875D202E5EC9003E3138 /* Protocols */ = {
