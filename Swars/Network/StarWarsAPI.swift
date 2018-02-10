@@ -12,6 +12,7 @@ import Moya
 enum StarWarsAPI {
     case getPeoplePage(number: String?)
     case getPerson(id: String)
+    case getSpecies(id: String)
 }
 
 extension StarWarsAPI: TargetType {
@@ -26,10 +27,12 @@ extension StarWarsAPI: TargetType {
     
     var path: String {
         switch self {
-        case .getPeoplePage(let _):
+        case .getPeoplePage(_):
             return "people"
         case .getPerson(let id):
-            return "people/\(id)/"
+            return "people/\(id)"
+        case .getSpecies(let id):
+            return "species/\(id)"
         }
     }
     
@@ -37,7 +40,7 @@ extension StarWarsAPI: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getPeoplePage, .getPerson:
+        case .getPeoplePage, .getPerson, .getSpecies:
             return .get
         }
     }
@@ -62,6 +65,8 @@ extension StarWarsAPI: TargetType {
         case .getPeoplePage:
             return "".utf8Encoded
         case .getPerson:
+            return "".utf8Encoded
+        case .getSpecies:
             return "".utf8Encoded
         }
     }

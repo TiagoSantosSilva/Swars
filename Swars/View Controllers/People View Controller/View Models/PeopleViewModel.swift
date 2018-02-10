@@ -29,10 +29,6 @@ class PeopleViewModel: PeopleViewModelRepresentable {
     
     private var peopleData: [PersonCellViewModelRepresentable]?
     
-    // MARK: - Input
-    
-    // private var inputDataSource = BehaviorSubject<[PersonCellViewModelRepresentable]>(value: [])
-    
     // MARK: - Data Source
     
     var dataSource: Observable<[PersonCellViewModelRepresentable]>
