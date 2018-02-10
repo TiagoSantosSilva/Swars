@@ -34,7 +34,7 @@ class PeopleViewController: BaseViewController {
         super.viewDidLoad()
         viewModel = PeopleViewModel(dataDependencies: DataDependencies())
         
-        viewModel.dataSource.catchError { [weak self] error in
+        viewModel.dataSource.catchError { error in
             print(error)
             return Observable.empty()
             }

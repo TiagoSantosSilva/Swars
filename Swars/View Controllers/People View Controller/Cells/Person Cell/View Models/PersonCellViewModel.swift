@@ -56,6 +56,6 @@ struct PersonCellViewModel: PersonCellViewModelRepresentable {
         guard let vehicleCount = person.vehicles?.count else {
             return ""
         }
-        return String(describing: vehicleCount)
+        return String.vehicleCountAsString(vehicleCount: vehicleCount)
     }
 }

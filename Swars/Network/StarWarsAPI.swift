@@ -26,7 +26,7 @@ extension StarWarsAPI: TargetType {
     
     var path: String {
         switch self {
-        case .getPeoplePage(let number):
+        case .getPeoplePage(let _):
             return "people"
         case .getPerson(let id):
             return "people/\(id)/"

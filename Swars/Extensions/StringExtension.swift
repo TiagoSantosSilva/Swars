@@ -16,4 +16,8 @@ extension String {
     var utf8Encoded: Data {
         return data(using: .utf8)!
     }
+    
+    static func vehicleCountAsString(vehicleCount: Int) -> String {
+        return vehicleCount == 1 ? "\(vehicleCount) vehicle" : "\(vehicleCount) vehicles"
+    }
 }
