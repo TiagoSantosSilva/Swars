@@ -9,17 +9,25 @@
 import UIKit
 import Reachability
 
-class BaseViewController: UIViewController {
+protocol BaseViewControllerDelegate {
+    func connectivityWasLost()
+}
 
+class BaseViewController: UIViewController {
+    
     // MARK: - Properties
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    // MARK: - Reachability Properties
+    // MARK: - Reachability Property
     
-    private lazy var reachability = Reachability()!
+    private let reachability = Reachability()!
+    
+    // MARK: - View Model
+    
+    private var baseViewModel: BaseViewModel!
     
     // MARK: - View Life Cycle
     
@@ -30,20 +38,24 @@ class BaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        addObserver()
+        baseViewModel.viewAppeared()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        removeObserver()
+        baseViewModel.viewDisappeared()
     }
     
     // MARK: - Setups
     
     func setupViewController() {
+        setupViewModel()
         setupView()
         setupNavigationController()
-        startReachabilityNotifier()
+    }
+    
+    func setupViewModel() {
+        baseViewModel = BaseViewModel(reachability: reachability, baseViewControllerDelegate: self)
     }
     
     func setupView() {
@@ -62,43 +74,11 @@ class BaseViewController: UIViewController {
             NSAttributedStringKey.foregroundColor: UIColor.white
         ]
     }
-    
-    func startReachabilityNotifier() {
-        startNotifier()
-    }
-    
-    // MARK: - Reachability Selectors
-    
-    @objc private func reachabilityChanged(note: Notification) {
-        let reachability = note.object as! Reachability
-        
-        switch reachability.connection {
-        case .none:
-            print("Network not reachable")
-            let noConnectivityViewController = NoConnectivityViewController(reachability: reachability)
-            present(noConnectivityViewController, animated: true, completion: nil)
-        default:
-            return
-        }
-    }
 }
 
-// MARK: - Reachability Protocol Implementation
-
-extension BaseViewController: ReachabilityProtocol {
-    func addObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged), name: .reachabilityChanged, object: reachability)
-    }
-    
-    func removeObserver() {
-        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
-    }
-    
-    func startNotifier() {
-        do {
-            try reachability.startNotifier()
-        } catch {
-            print("Could not start reachability notifier")
-        }
+extension BaseViewController: BaseViewControllerDelegate {
+    func connectivityWasLost() {
+        let noConnectivityViewController = NoConnectivityViewController(reachability: reachability)
+        present(noConnectivityViewController, animated: true, completion: nil)
     }
 }

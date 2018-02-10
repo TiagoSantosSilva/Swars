@@ -1,5 +1,5 @@
 //
-//  NoConnectivityViewViewModel.swift
+//  BaseViewModel.swift
 //  Swars
 //
 //  Created by Tiago Santos on 10/02/18.
@@ -9,23 +9,33 @@
 import Foundation
 import Reachability
 
-class NoConnectivityViewViewModel {
+class BaseViewModel {
     
-    // MARK: - Reachability Property
+    // MARK: - Reachability Properties
     
-    private var reachability: Reachability!
+    private lazy var reachability = Reachability()!
     
     // MARK: - Delegates
     
-    private var delegate: NoConnectivityDelegate?
+    private var delegate: BaseViewControllerDelegate?
     
     // MARK: - Init
     
-    init(reachability: Reachability, noConnectivityDelegate: NoConnectivityDelegate) {
+    init(reachability: Reachability, baseViewControllerDelegate: BaseViewControllerDelegate) {
         self.reachability = reachability
-        self.delegate = noConnectivityDelegate
+        self.delegate = baseViewControllerDelegate
         
+        startNotifier()
+    }
+    
+    // MARK: - View Life Cycle
+    
+    func viewAppeared() {
         addObserver()
+    }
+    
+    func viewDisappeared() {
+        removeObserver()
     }
     
     // MARK: - Selectors
@@ -34,9 +44,9 @@ class NoConnectivityViewViewModel {
         guard let reachability = note.object as? Reachability else { return }
         
         switch reachability.connection {
-        case .wifi, .cellular:
-            removeObserver()
-            delegate?.connectivityWasObtained()
+        case .none:
+            print("Network not reachable")
+            delegate?.connectivityWasLost()
         default:
             return
         }
@@ -45,7 +55,8 @@ class NoConnectivityViewViewModel {
 
 // MARK: - Reachability Protocol Implementation
 
-extension NoConnectivityViewViewModel: ReachabilityProtocol {
+extension BaseViewModel: ReachabilityProtocol {
+    
     internal func addObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
     }
@@ -55,6 +66,10 @@ extension NoConnectivityViewViewModel: ReachabilityProtocol {
     }
     
     internal func startNotifier() {
-        return
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Could not start reachability notifier")
+        }
     }
 }
