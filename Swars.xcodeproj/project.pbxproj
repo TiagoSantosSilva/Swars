@@ -23,6 +23,13 @@
 		27AF6C85202E070100F208DA /* PeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27AF6C83202E070100F208DA /* PeopleViewController.xib */; };
 		27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF6C86202E070C00F208DA /* AboutViewController.swift */; };
 		27AF6C89202E070C00F208DA /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27AF6C87202E070C00F208DA /* AboutViewController.xib */; };
+		27B27F042030803C005DDEB6 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B27F022030803C005DDEB6 /* PersonDetailsViewController.swift */; };
+		27B27F052030803C005DDEB6 /* PersonDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B27F032030803C005DDEB6 /* PersonDetailsViewController.xib */; };
+		27B27F0720308054005DDEB6 /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B27F0620308054005DDEB6 /* PersonDetailsViewModel.swift */; };
+		27B27F0920308346005DDEB6 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B27F0820308346005DDEB6 /* Vehicle.swift */; };
+		27B27F0B203085E6005DDEB6 /* StarWarsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B27F0A203085E6005DDEB6 /* StarWarsDataManager.swift */; };
+		27B27F0D2030860D005DDEB6 /* DataManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B27F0C2030860D005DDEB6 /* DataManagerError.swift */; };
+		27B27F0F20309518005DDEB6 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B27F0E20309518005DDEB6 /* Planet.swift */; };
 		27C457ED202F3646005A5AC6 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */; };
 		27C457EF202F3877005A5AC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457EE202F3877005A5AC6 /* String.swift */; };
 		27C457F1202F39B7005A5AC6 /* StarWarsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */; };
@@ -71,6 +78,13 @@
 		27AF6C83202E070100F208DA /* PeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleViewController.xib; sourceTree = "<group>"; };
 		27AF6C86202E070C00F208DA /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		27AF6C87202E070C00F208DA /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		27B27F022030803C005DDEB6 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
+		27B27F032030803C005DDEB6 /* PersonDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonDetailsViewController.xib; sourceTree = "<group>"; };
+		27B27F0620308054005DDEB6 /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
+		27B27F0820308346005DDEB6 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		27B27F0A203085E6005DDEB6 /* StarWarsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsDataManager.swift; sourceTree = "<group>"; };
+		27B27F0C2030860D005DDEB6 /* DataManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerError.swift; sourceTree = "<group>"; };
+		27B27F0E20309518005DDEB6 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
 		27C457EE202F3877005A5AC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsNetwork.swift; sourceTree = "<group>"; };
@@ -237,6 +251,8 @@
 				27C4580C202F55E4005A5AC6 /* Person.swift */,
 				27C45817202F777F005A5AC6 /* PeoplePage.swift */,
 				274BB1C5202FB0520085E868 /* Species.swift */,
+				27B27F0820308346005DDEB6 /* Vehicle.swift */,
+				27B27F0E20309518005DDEB6 /* Planet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				27C45805202F4FCA005A5AC6 /* Cells */,
+				27B27EFE20307FE9005DDEB6 /* Person Details View Controller */,
 				27C45812202F578F005A5AC6 /* View Controller */,
 				27C45810202F5754005A5AC6 /* View Models */,
 				27C45811202F5759005A5AC6 /* XIB */,
@@ -293,12 +310,47 @@
 			path = "About View Controller";
 			sourceTree = "<group>";
 		};
+		27B27EFE20307FE9005DDEB6 /* Person Details View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27B27F002030801C005DDEB6 /* View Controller */,
+				27B27EFF20308016005DDEB6 /* View Model */,
+				27B27F0120308023005DDEB6 /* XIB */,
+			);
+			path = "Person Details View Controller";
+			sourceTree = "<group>";
+		};
+		27B27EFF20308016005DDEB6 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				27B27F0620308054005DDEB6 /* PersonDetailsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		27B27F002030801C005DDEB6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27B27F022030803C005DDEB6 /* PersonDetailsViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27B27F0120308023005DDEB6 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				27B27F032030803C005DDEB6 /* PersonDetailsViewController.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
 		27C457EB202F3635005A5AC6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */,
 				27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */,
 				27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */,
+				27B27F0A203085E6005DDEB6 /* StarWarsDataManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -307,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				27C457F9202F3D75005A5AC6 /* Result.swift */,
+				27B27F0C2030860D005DDEB6 /* DataManagerError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -521,6 +574,7 @@
 				27AF6C6D202E014200F208DA /* Assets.xcassets in Resources */,
 				27AF6C85202E070100F208DA /* PeopleViewController.xib in Resources */,
 				27798063202E55F80085CFDF /* NoConnectivityViewController.xib in Resources */,
+				27B27F052030803C005DDEB6 /* PersonDetailsViewController.xib in Resources */,
 				27AF6C7E202E055100F208DA /* RootViewController.xib in Resources */,
 				27AF6C89202E070C00F208DA /* AboutViewController.xib in Resources */,
 				27C45809202F5016005A5AC6 /* PersonCell.xib in Resources */,
@@ -600,6 +654,7 @@
 			files = (
 				27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */,
 				27C457F1202F39B7005A5AC6 /* StarWarsNetwork.swift in Sources */,
+				27B27F0B203085E6005DDEB6 /* StarWarsDataManager.swift in Sources */,
 				27C45829202F99C8005A5AC6 /* AboutViewModel.swift in Sources */,
 				27C45808202F5016005A5AC6 /* PersonCell.swift in Sources */,
 				27C457FA202F3D75005A5AC6 /* Result.swift in Sources */,
@@ -620,6 +675,8 @@
 				27C457FC202F3DF8005A5AC6 /* UITableView.swift in Sources */,
 				278810F6202E27C300064363 /* UIColor.swift in Sources */,
 				27C45818202F777F005A5AC6 /* PeoplePage.swift in Sources */,
+				27B27F0920308346005DDEB6 /* Vehicle.swift in Sources */,
+				27B27F0D2030860D005DDEB6 /* DataManagerError.swift in Sources */,
 				27C457ED202F3646005A5AC6 /* StarWarsAPI.swift in Sources */,
 				27437257202E7949003855A7 /* UIViewController.swift in Sources */,
 				27C4580B202F5510005A5AC6 /* PersonCellViewModel.swift in Sources */,
@@ -628,11 +685,14 @@
 				27C4581A202F9006005A5AC6 /* Roundable.swift in Sources */,
 				27C457F3202F3BF7005A5AC6 /* DataDependencies.swift in Sources */,
 				27C4581D202F9045005A5AC6 /* ProfileImageView.swift in Sources */,
+				27B27F0F20309518005DDEB6 /* Planet.swift in Sources */,
 				27C457F5202F3C66005A5AC6 /* DataDependencyProtocol.swift in Sources */,
 				27C45824202F98EA005A5AC6 /* AboutCellViewModel.swift in Sources */,
+				27B27F042030803C005DDEB6 /* PersonDetailsViewController.swift in Sources */,
 				27C45816202F57FF005A5AC6 /* PeopleViewModel.swift in Sources */,
 				27E58764202E6E49003E3138 /* NoConnectivityViewViewModel.swift in Sources */,
 				27C45800202F3E72005A5AC6 /* UITableViewCell.swift in Sources */,
+				27B27F0720308054005DDEB6 /* PersonDetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
