@@ -15,6 +15,10 @@ class AboutViewController: BaseViewController {
     @IBOutlet weak var profileImageView: ProfileImageView!
     @IBOutlet weak var informationTableView: UITableView!
     
+    // MARK: - Properties
+    
+    private let viewControllerTitle = "About"
+    
     // MARK: - View Model
     
     private var aboutViewModel: AboutViewModel!
@@ -29,6 +33,6 @@ class AboutViewController: BaseViewController {
     
     override func setupViewController() {
         super.setupViewController()
-        title = "About"
+        title = viewControllerTitle
     }
 }

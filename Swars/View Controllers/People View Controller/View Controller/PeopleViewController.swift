@@ -20,6 +20,10 @@ class PeopleViewController: BaseViewController {
         }
     }
     
+    // MARK: - Properties
+    
+    private let viewControllerTitle = "Star Wars People"
+    
     // MARK: - Dispose Bag
     
     private let disposeBag = DisposeBag()
@@ -39,13 +43,15 @@ class PeopleViewController: BaseViewController {
     
     override func setupViewController() {
         super.setupViewController()
-        title = "Star Wars People"
+        title = viewControllerTitle
     }
     
     // MARK: - Setup View Model
     override func setupViewModel() {
         super.setupViewModel()
         viewModel = PeopleViewModel(dataDependencies: DataDependencies())
+        
+        // TODO: - Make the Collection View only visible after this is finished.
         
         viewModel.dataSource.catchError { error in
             print(error)
