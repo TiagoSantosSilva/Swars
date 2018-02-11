@@ -17,6 +17,7 @@ class AboutViewController: BaseViewController {
     @IBOutlet weak var informationTableView: UITableView! {
         didSet {
             informationTableView.register(AboutCell.self)
+            informationTableView.tableFooterView = UIView()
         }
     }
     
@@ -81,7 +82,7 @@ extension AboutViewController: UITableViewDataSource, UITableViewDelegate {
             return
         }
         
-        view.backgroundView?.backgroundColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
+        view.backgroundView?.backgroundColor = #colorLiteral(red: 0.01960784314, green: 0.01960784314, blue: 0.01960784314, alpha: 1)
         view.textLabel?.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         view.textLabel?.font = UIFont(name: "AvenirNext-Bold", size: 20)
     }
