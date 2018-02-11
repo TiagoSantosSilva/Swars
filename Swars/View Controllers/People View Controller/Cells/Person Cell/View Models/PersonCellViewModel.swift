@@ -45,7 +45,7 @@ struct PersonCellViewModel: PersonCellViewModelRepresentable {
         self.vehicleCount = PersonCellViewModel.getVehicleCount(person: person)
         
         if let personSpecies = person.species?.first {
-            let speciesId = PersonCellViewModel.getIdFromUrl(with: personSpecies)
+            let speciesId = personSpecies.identifierFromUrl
             
             if let speciesId = speciesId {
                 speciesDataSource = PersonCellViewModel.fetchPersonSpecies(with: speciesId, dataDependency: dataDependencies).map {
@@ -64,7 +64,7 @@ struct PersonCellViewModel: PersonCellViewModelRepresentable {
             return ""
         }
         
-        guard let personId = getIdFromUrl(with: personUrl) else {
+        guard let personId = personUrl.identifierFromUrl else {
             return ""
         }
         
@@ -83,7 +83,7 @@ struct PersonCellViewModel: PersonCellViewModelRepresentable {
             return ""
         }
         
-        guard let personSpeciesId = getIdFromUrl(with: personSpeciesUrl) else {
+        guard let personSpeciesId = personSpeciesUrl.identifierFromUrl else {
             return ""
         }
         
@@ -112,13 +112,5 @@ struct PersonCellViewModel: PersonCellViewModelRepresentable {
     
     static private func fetchPersonSpeciesData(with identifier: String, dataDependency: DependenciesList) -> Observable<Data> {
         return dataDependency.networkService.getSpeciesInformation(with: identifier)
-    }
-    
-    // MARK: - String Handling
-    
-    private static func getIdFromUrl(with url: String) -> String? {
-        let urlWithoutLastBar = url.substring(to: url.index(before: url.endIndex))
-        guard let id = urlWithoutLastBar.components(separatedBy: "/").last else { return nil }
-        return id
     }
 }

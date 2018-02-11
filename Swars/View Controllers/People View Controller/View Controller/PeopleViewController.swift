@@ -36,7 +36,6 @@ class PeopleViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
     }
     
     // MARK: - Setups
@@ -61,13 +60,16 @@ class PeopleViewController: BaseViewController {
                 cell.configure(with: model)
             }
             .disposed(by: disposeBag)
+        
+        collectionView.rx.modelSelected(PersonCellViewModel.self)
+            .subscribe(onNext: { value in
+                let personDetailsViewController = PersonDetailsViewController(personIdentifier: value.personId, dataDependencies: DataDependencies())
+                self.navigationController?.pushViewController(personDetailsViewController, animated: true)
+            })
+        .disposed(by: disposeBag)
     }
 }
 
 extension PeopleViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // FIXME: -
-        let personDetailsViewController = PersonDetailsViewController(personIdentifier: "1")
-        navigationController?.pushViewController(personDetailsViewController, animated: true)
-    }
+
 }

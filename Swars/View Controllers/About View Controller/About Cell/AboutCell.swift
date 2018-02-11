@@ -18,7 +18,6 @@ class AboutCell: UITableViewCell {
     
     @IBOutlet weak var informationLabel: UILabel!
     
-    
     // MARK: - View Life Cycle
     
     override func awakeFromNib() {

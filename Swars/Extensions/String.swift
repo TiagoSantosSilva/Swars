@@ -20,4 +20,10 @@ extension String {
     static func vehicleCountAsString(vehicleCount: Int) -> String {
         return vehicleCount == 1 ? "\(vehicleCount) vehicle" : "\(vehicleCount) vehicles"
     }
+    
+    var identifierFromUrl: String? {
+        let urlWithoutLastBar = self.substring(to: self.index(before: self.endIndex))
+        guard let id = urlWithoutLastBar.components(separatedBy: "/").last else { return nil }
+        return id
+    }
 }

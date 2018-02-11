@@ -59,4 +59,14 @@ struct StarWarsNetwork: StarWarsNetworkProtocol {
             .map { $0.data }
             .asObservable()
     }
+    
+    func getPlanetInformation(with identifier: String) -> Observable<Data> {
+        return provider.rx
+            .request(.getPlanet(id: identifier))
+            .debug()
+            .filterSuccessfulStatusCodes()
+            .retry(3)
+            .map { $0.data }
+            .asObservable()
+    }
 }

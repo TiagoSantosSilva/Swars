@@ -161,6 +161,13 @@
 			path = Transitions;
 			sourceTree = "<group>";
 		};
+		27715DE22030CE1700FC4686 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		2779805F202E55D70085CFDF /* No Connectivity View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +320,7 @@
 		27B27EFE20307FE9005DDEB6 /* Person Details View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27715DE22030CE1700FC4686 /* Cells */,
 				27B27F002030801C005DDEB6 /* View Controller */,
 				27B27EFF20308016005DDEB6 /* View Model */,
 				27B27F0120308023005DDEB6 /* XIB */,

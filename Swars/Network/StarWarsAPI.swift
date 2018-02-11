@@ -10,14 +10,16 @@ import Foundation
 import Moya
 
 struct StarWarsEndpoints {
-    static let vehicleUrl = "vehicle/"
+    static let vehicleUrl = "vehicles/"
     static let personUrl = "people/"
+    static let planetUrl = "planets/"
 }
 
 enum StarWarsAPI {
     case getPeoplePage(number: String?)
     case getPerson(id: String)
     case getSpecies(id: String)
+    case getPlanet(id: String)
 }
 
 extension StarWarsAPI: TargetType {
@@ -38,6 +40,8 @@ extension StarWarsAPI: TargetType {
             return "people/\(id)"
         case .getSpecies(let id):
             return "species/\(id)"
+        case .getPlanet(let id):
+            return "planets/\(id)"
         }
     }
     
@@ -45,7 +49,7 @@ extension StarWarsAPI: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getPeoplePage, .getPerson, .getSpecies:
+        case .getPeoplePage, .getPerson, .getSpecies, .getPlanet:
             return .get
         }
     }
@@ -73,6 +77,8 @@ extension StarWarsAPI: TargetType {
             return "".utf8Encoded
         case .getSpecies:
             return "".utf8Encoded
+        case .getPlanet:
+            return "".utf8Encoded
         }
     }
     
@@ -91,24 +97,3 @@ extension StarWarsAPI: TargetType {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
