@@ -32,6 +32,19 @@ class PeopleViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+    }
+    
+    // MARK: - Setups
+    
+    override func setupViewController() {
+        super.setupViewController()
+        title = "Star Wars People"
+    }
+    
+    // MARK: - Setup View Model
+    override func setupViewModel() {
+        super.setupViewModel()
         viewModel = PeopleViewModel(dataDependencies: DataDependencies())
         
         viewModel.dataSource.catchError { error in
@@ -42,14 +55,11 @@ class PeopleViewController: BaseViewController {
                 cell.configure(with: model)
             }
             .disposed(by: disposeBag)
-        
-        // TODO: - Model Selection Action Bind
     }
-    
-    // MARK: - Setups
-    
-    override func setupViewController() {
-        super.setupViewController()
-        title = "Star Wars People"
+}
+
+extension PeopleViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // TODO: - Display Details View
     }
 }
