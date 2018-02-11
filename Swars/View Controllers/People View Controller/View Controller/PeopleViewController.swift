@@ -66,6 +66,8 @@ class PeopleViewController: BaseViewController {
 
 extension PeopleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO: - Display Details View
+        // FIXME: -
+        let personDetailsViewController = PersonDetailsViewController(personIdentifier: "1")
+        navigationController?.pushViewController(personDetailsViewController, animated: true)
     }
 }

@@ -9,6 +9,11 @@
 import Foundation
 import Moya
 
+struct StarWarsEndpoints {
+    static let vehicleUrl = "vehicle/"
+    static let personUrl = "people/"
+}
+
 enum StarWarsAPI {
     case getPeoplePage(number: String?)
     case getPerson(id: String)
