@@ -10,20 +10,55 @@ import Foundation
 
 struct AboutViewModel {
     
-    // MARK: - Properties
+    // MARK: - Section Enum
     
-    private let developerName = ["Name": "Tiago Silva"]
+    enum Section: Int {
+        
+        case developerName
+        case developerBirthdate
+        
+        // MARK: - Properties
+        
+        var title: String {
+            switch self {
+            case .developerName: return "Name"
+            case .developerBirthdate: return "Birthdate"
+            }
+        }
+        
+        var numberOfRows: Int {
+            switch self {
+            case .developerName:
+                return 1
+            case .developerBirthdate:
+                return 1
+            }
+        }
+        
+        static var count: Int {
+            return Section.developerBirthdate.rawValue + 1
+        }
+    }
     
-    private let developerBirthdate = ["Birthdate": "5th June, 1995"]
-    
-    var developerInformations: [[String: String]] {
-        return [developerName, developerBirthdate]
+    enum Row: Int {
+        
+        case developerName
+        case developerBirthdate
+        
+        // MARK: - Properties
+        
+        var title: String {
+            switch self {
+            case .developerName: return "Tiago Silva"
+            case .developerBirthdate: return "5th June, 1995"
+            }
+        }
     }
     
     // MARK: -
     
     var numberOfSections: Int {
-        return developerInformations.count
+        return Section.count
     }
     
     var numberOfRows: Int {
@@ -32,7 +67,19 @@ struct AboutViewModel {
     
     // MARK: -
     
-    func information(for index: Int) -> [String: String] {
-        return developerInformations[index]
+    func sectionTitle(for index: Int) -> String {
+        guard let section = Section(rawValue: index) else {
+            fatalError("Unexpected Section")
+        }
+        
+        return section.title
+    }
+    
+    func rowContent(for index: Int) -> String {
+        guard let row = Row(rawValue: index) else {
+            fatalError("Unexpected Row")
+        }
+        
+        return row.title
     }
 }
