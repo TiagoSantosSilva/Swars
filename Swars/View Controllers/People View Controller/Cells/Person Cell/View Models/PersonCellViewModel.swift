@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 protocol PersonCellViewModelRepresentable {
-    var speciesDataSource: Observable<String> { get }
+    var speciesDataSource: Observable<String>? { get }
     
     var personId: String! { get }
     var name: String! { get }
@@ -34,7 +34,7 @@ struct PersonCellViewModel: PersonCellViewModelRepresentable {
     
     // MARK: - Person Species
     
-    var speciesDataSource: Observable<String>
+    var speciesDataSource: Observable<String>?
     
     // MARK: - Initializer
     
@@ -44,26 +44,30 @@ struct PersonCellViewModel: PersonCellViewModelRepresentable {
         self.name = PersonCellViewModel.getPersonName(person: person)
         self.vehicleCount = PersonCellViewModel.getVehicleCount(person: person)
         
-        // FIXME: - Unwrap this
-        let personSpecies = person.species!.first!
-        
-        // FIXME: - Unwrap this
-        let speciesId = PersonCellViewModel.getSpeciesIdFromUrl(with: personSpecies)
-        
-        // FIXME: - Unwrap this
-        speciesDataSource = PersonCellViewModel.fetchPersonSpecies(with: speciesId!, dataDependency: dataDependencies).map {
-            $0.name.map {
-                String(describing: $0)
-                }!
+        if let personSpecies = person.species?.first {
+            let speciesId = PersonCellViewModel.getIdFromUrl(with: personSpecies)
+            
+            if let speciesId = speciesId {
+                speciesDataSource = PersonCellViewModel.fetchPersonSpecies(with: speciesId, dataDependency: dataDependencies).map {
+                    $0.name.map {
+                        String(describing: $0)
+                        }!
+                }
+            }
         }
     }
     
     // MARK: - Person Attributes Unwrappers
-    // TODO: - Substring the id
+    
     private static func getPersonId(person: Person) -> String {
-        guard let personId = person.url else {
+        guard let personUrl = person.url else {
             return ""
         }
+        
+        guard let personId = getIdFromUrl(with: personUrl) else {
+            return ""
+        }
+        
         return personId
     }
     
@@ -75,11 +79,11 @@ struct PersonCellViewModel: PersonCellViewModelRepresentable {
     }
     
     private static func getPersonSpeciesId(person: Person) -> String {
-        guard let personSpecies = person.species?.first else {
+        guard let personSpeciesUrl = person.species?.first else {
             return ""
         }
         
-        guard let personSpeciesId = getSpeciesIdFromUrl(with: personSpecies) else {
+        guard let personSpeciesId = getIdFromUrl(with: personSpeciesUrl) else {
             return ""
         }
         
@@ -112,9 +116,9 @@ struct PersonCellViewModel: PersonCellViewModelRepresentable {
     
     // MARK: - String Handling
     
-    private static func getSpeciesIdFromUrl(with url: String) -> String? {
+    private static func getIdFromUrl(with url: String) -> String? {
         let urlWithoutLastBar = url.substring(to: url.index(before: url.endIndex))
-        guard let speciesId = urlWithoutLastBar.components(separatedBy: "/").last else { return nil }
-        return speciesId
+        guard let id = urlWithoutLastBar.components(separatedBy: "/").last else { return nil }
+        return id
     }
 }

@@ -34,7 +34,8 @@ class PersonCell: UICollectionViewCell {
         personNameLabel.text = viewModel.name
         vehicleNumberLabel.text = viewModel.vehicleCount
         
-        viewModel.speciesDataSource.catchError { error in
+        viewModel.speciesDataSource?.catchError { error in
+            // FIXME: - Present Alert
             print(error)
             return Observable.empty()
             }.bind(to: personSpeciesLabel.rx.text)
