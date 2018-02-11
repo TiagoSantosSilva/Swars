@@ -9,7 +9,7 @@
 import UIKit
 
 class AboutViewController: BaseViewController {
-
+    
     // MARK: - IB Outlets
     
     @IBOutlet weak var profileImageView: ProfileImageView!
@@ -44,6 +44,7 @@ class AboutViewController: BaseViewController {
     
     func setupDelegates() {
         informationTableView.dataSource = self
+        informationTableView.delegate = self
     }
     
     override func setupViewModel() {
@@ -73,5 +74,15 @@ extension AboutViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return aboutViewModel.sectionTitle(for: section)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let view = view as? UITableViewHeaderFooterView else {
+            return
+        }
+        
+        view.backgroundView?.backgroundColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
+        view.textLabel?.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        view.textLabel?.font = UIFont(name: "AvenirNext-Bold", size: 20)
     }
 }

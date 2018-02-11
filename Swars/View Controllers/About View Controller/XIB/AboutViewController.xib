@@ -23,32 +23,40 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crash_bandicoot" translatesAutoresizingMaskIntoConstraints="NO" id="zAX-X8-GhJ" customClass="ProfileImageView" customModule="Swars" customModuleProvider="target">
-                    <rect key="frame" x="112.66666666666669" y="124" width="150" height="150"/>
+                    <rect key="frame" x="112.66666666666669" y="84" width="150" height="150"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="6v6-lx-Gas"/>
-                        <constraint firstAttribute="height" constant="150" id="RIL-qq-SEK"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="6v6-lx-Gas"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="RIL-qq-SEK"/>
                     </constraints>
                 </imageView>
-                <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="4yC-hX-SSv">
-                    <rect key="frame" x="0.0" y="344" width="375" height="434"/>
+                <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="4yC-hX-SSv">
+                    <rect key="frame" x="0.0" y="264" width="375" height="344"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <color key="sectionIndexBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHub_Logo_White" translatesAutoresizingMaskIntoConstraints="NO" id="lPu-ar-vmb">
+                    <rect key="frame" x="65" y="658" width="245" height="100"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="zAX-X8-GhJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="R3j-ww-J88"/>
-                <constraint firstItem="4yC-hX-SSv" firstAttribute="top" secondItem="zAX-X8-GhJ" secondAttribute="bottom" constant="70" id="Ucg-Yi-Prw"/>
+                <constraint firstItem="lPu-ar-vmb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="65" id="6yd-FR-UDP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4yC-hX-SSv" secondAttribute="bottom" constant="170" id="FBg-lg-SR7"/>
+                <constraint firstItem="lPu-ar-vmb" firstAttribute="top" secondItem="4yC-hX-SSv" secondAttribute="bottom" constant="50" id="MzT-2u-qKr"/>
+                <constraint firstItem="zAX-X8-GhJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="R3j-ww-J88"/>
+                <constraint firstItem="4yC-hX-SSv" firstAttribute="top" secondItem="zAX-X8-GhJ" secondAttribute="bottom" constant="30" id="Ucg-Yi-Prw"/>
                 <constraint firstItem="4yC-hX-SSv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jra-IP-TWu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4yC-hX-SSv" secondAttribute="trailing" id="kN6-0G-rVO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lPu-ar-vmb" secondAttribute="trailing" constant="65" id="ors-yN-jxt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lPu-ar-vmb" secondAttribute="bottom" constant="20" id="vEv-cY-21V"/>
                 <constraint firstItem="zAX-X8-GhJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wIh-TQ-bUt"/>
-                <constraint firstItem="4yC-hX-SSv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="yjw-x6-kz1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="25.5" y="52"/>
         </view>
     </objects>
     <resources>
+        <image name="GitHub_Logo_White" width="1000" height="410"/>
         <image name="crash_bandicoot" width="293" height="258"/>
     </resources>
 </document>
