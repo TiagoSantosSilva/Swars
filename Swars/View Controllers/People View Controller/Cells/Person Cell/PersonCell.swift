@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PersonCell: UICollectionViewCell {
-
+    
     // MARK: - IB Outlets
     
     @IBOutlet weak var personNameLabel: UILabel!
     @IBOutlet weak var personSpeciesLabel: UILabel!
     @IBOutlet weak var vehicleNumberLabel: UILabel!
+    
+    // MARK: - Dispose Bag
+    
+    private let disposeBag = DisposeBag()
     
     // MARK: - View Life Cycle
     
@@ -26,8 +32,13 @@ class PersonCell: UICollectionViewCell {
     
     func configure(with viewModel: PersonCellViewModelRepresentable) {
         personNameLabel.text = viewModel.name
-        personSpeciesLabel.text = viewModel.species
         vehicleNumberLabel.text = viewModel.vehicleCount
+        
+        viewModel.speciesDataSource.catchError { error in
+            print(error)
+            return Observable.empty()
+            }.bind(to: personSpeciesLabel.rx.text)
+            .disposed(by: disposeBag)
     }
     
     // MARK: - Reuse

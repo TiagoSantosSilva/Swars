@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		27437255202E7917003855A7 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437254202E7917003855A7 /* FadeTransition.swift */; };
-		27437257202E7949003855A7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437256202E7949003855A7 /* UIViewControllerExtension.swift */; };
+		27437257202E7949003855A7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437256202E7949003855A7 /* UIViewController.swift */; };
 		274BB1C6202FB0520085E868 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BB1C5202FB0520085E868 /* Species.swift */; };
 		27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27798060202E55F80085CFDF /* NoConnectivityViewController.swift */; };
 		27798063202E55F80085CFDF /* NoConnectivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27798061202E55F80085CFDF /* NoConnectivityViewController.xib */; };
 		278810F3202E0AA500064363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F2202E0AA500064363 /* BaseViewController.swift */; };
-		278810F6202E27C300064363 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F5202E27C300064363 /* UIColorExtension.swift */; };
-		278810FA202E2C7300064363 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F9202E2C7300064363 /* NavigationControllerExtension.swift */; };
+		278810F6202E27C300064363 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F5202E27C300064363 /* UIColor.swift */; };
+		278810FA202E2C7300064363 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F9202E2C7300064363 /* NavigationController.swift */; };
 		27AF6C64202E014200F208DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF6C63202E014200F208DA /* AppDelegate.swift */; };
 		27AF6C6D202E014200F208DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AF6C6C202E014200F208DA /* Assets.xcassets */; };
 		27AF6C7D202E055100F208DA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF6C7B202E055100F208DA /* RootViewController.swift */; };
@@ -24,16 +24,16 @@
 		27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF6C86202E070C00F208DA /* AboutViewController.swift */; };
 		27AF6C89202E070C00F208DA /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27AF6C87202E070C00F208DA /* AboutViewController.xib */; };
 		27C457ED202F3646005A5AC6 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */; };
-		27C457EF202F3877005A5AC6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457EE202F3877005A5AC6 /* StringExtension.swift */; };
+		27C457EF202F3877005A5AC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457EE202F3877005A5AC6 /* String.swift */; };
 		27C457F1202F39B7005A5AC6 /* StarWarsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */; };
 		27C457F3202F3BF7005A5AC6 /* DataDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */; };
 		27C457F5202F3C66005A5AC6 /* DataDependencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F4202F3C66005A5AC6 /* DataDependencyProtocol.swift */; };
 		27C457FA202F3D75005A5AC6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457F9202F3D75005A5AC6 /* Result.swift */; };
-		27C457FC202F3DF8005A5AC6 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457FB202F3DF8005A5AC6 /* UITableViewExtension.swift */; };
+		27C457FC202F3DF8005A5AC6 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457FB202F3DF8005A5AC6 /* UITableView.swift */; };
 		27C457FE202F3E55005A5AC6 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457FD202F3E55005A5AC6 /* Identifiable.swift */; };
-		27C45800202F3E72005A5AC6 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457FF202F3E72005A5AC6 /* UITableViewCellExtension.swift */; };
-		27C45802202F4C7A005A5AC6 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45801202F4C7A005A5AC6 /* UICollectionViewExtension.swift */; };
-		27C45804202F4C88005A5AC6 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45803202F4C88005A5AC6 /* UICollectionViewCellExtension.swift */; };
+		27C45800202F3E72005A5AC6 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C457FF202F3E72005A5AC6 /* UITableViewCell.swift */; };
+		27C45802202F4C7A005A5AC6 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45801202F4C7A005A5AC6 /* UICollectionView.swift */; };
+		27C45804202F4C88005A5AC6 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45803202F4C88005A5AC6 /* UICollectionViewCell.swift */; };
 		27C45808202F5016005A5AC6 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C45806202F5016005A5AC6 /* PersonCell.swift */; };
 		27C45809202F5016005A5AC6 /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C45807202F5016005A5AC6 /* PersonCell.xib */; };
 		27C4580B202F5510005A5AC6 /* PersonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4580A202F5510005A5AC6 /* PersonCellViewModel.swift */; };
@@ -54,13 +54,13 @@
 
 /* Begin PBXFileReference section */
 		27437254202E7917003855A7 /* FadeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
-		27437256202E7949003855A7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		27437256202E7949003855A7 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		274BB1C5202FB0520085E868 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		27798060202E55F80085CFDF /* NoConnectivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectivityViewController.swift; sourceTree = "<group>"; };
 		27798061202E55F80085CFDF /* NoConnectivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoConnectivityViewController.xib; sourceTree = "<group>"; };
 		278810F2202E0AA500064363 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		278810F5202E27C300064363 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		278810F9202E2C7300064363 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
+		278810F5202E27C300064363 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		278810F9202E2C7300064363 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		27AF6C60202E014200F208DA /* Swars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AF6C63202E014200F208DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27AF6C6C202E014200F208DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,16 +72,16 @@
 		27AF6C86202E070C00F208DA /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		27AF6C87202E070C00F208DA /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
-		27C457EE202F3877005A5AC6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		27C457EE202F3877005A5AC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsNetwork.swift; sourceTree = "<group>"; };
 		27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDependencies.swift; sourceTree = "<group>"; };
 		27C457F4202F3C66005A5AC6 /* DataDependencyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDependencyProtocol.swift; sourceTree = "<group>"; };
 		27C457F9202F3D75005A5AC6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		27C457FB202F3DF8005A5AC6 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		27C457FB202F3DF8005A5AC6 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		27C457FD202F3E55005A5AC6 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
-		27C457FF202F3E72005A5AC6 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
-		27C45801202F4C7A005A5AC6 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
-		27C45803202F4C88005A5AC6 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
+		27C457FF202F3E72005A5AC6 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		27C45801202F4C7A005A5AC6 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		27C45803202F4C88005A5AC6 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
 		27C45806202F5016005A5AC6 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		27C45807202F5016005A5AC6 /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
 		27C4580A202F5510005A5AC6 /* PersonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellViewModel.swift; sourceTree = "<group>"; };
@@ -176,14 +176,14 @@
 		278810F4202E27B700064363 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				278810F9202E2C7300064363 /* NavigationControllerExtension.swift */,
-				27C457EE202F3877005A5AC6 /* StringExtension.swift */,
-				27C45803202F4C88005A5AC6 /* UICollectionViewCellExtension.swift */,
-				27C45801202F4C7A005A5AC6 /* UICollectionViewExtension.swift */,
-				278810F5202E27C300064363 /* UIColorExtension.swift */,
-				27C457FF202F3E72005A5AC6 /* UITableViewCellExtension.swift */,
-				27C457FB202F3DF8005A5AC6 /* UITableViewExtension.swift */,
-				27437256202E7949003855A7 /* UIViewControllerExtension.swift */,
+				278810F9202E2C7300064363 /* NavigationController.swift */,
+				27C457EE202F3877005A5AC6 /* String.swift */,
+				27C45801202F4C7A005A5AC6 /* UICollectionView.swift */,
+				27C45803202F4C88005A5AC6 /* UICollectionViewCell.swift */,
+				278810F5202E27C300064363 /* UIColor.swift */,
+				27C457FB202F3DF8005A5AC6 /* UITableView.swift */,
+				27C457FF202F3E72005A5AC6 /* UITableViewCell.swift */,
+				27437256202E7949003855A7 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -607,21 +607,21 @@
 				27C45821202F976F005A5AC6 /* AboutCell.swift in Sources */,
 				27C457FE202F3E55005A5AC6 /* Identifiable.swift in Sources */,
 				274BB1C6202FB0520085E868 /* Species.swift in Sources */,
-				27C457EF202F3877005A5AC6 /* StringExtension.swift in Sources */,
+				27C457EF202F3877005A5AC6 /* String.swift in Sources */,
 				278810F3202E0AA500064363 /* BaseViewController.swift in Sources */,
 				27AF6C88202E070C00F208DA /* AboutViewController.swift in Sources */,
-				27C45804202F4C88005A5AC6 /* UICollectionViewCellExtension.swift in Sources */,
+				27C45804202F4C88005A5AC6 /* UICollectionViewCell.swift in Sources */,
 				27AF6C84202E070100F208DA /* PeopleViewController.swift in Sources */,
-				278810FA202E2C7300064363 /* NavigationControllerExtension.swift in Sources */,
-				27C45802202F4C7A005A5AC6 /* UICollectionViewExtension.swift in Sources */,
+				278810FA202E2C7300064363 /* NavigationController.swift in Sources */,
+				27C45802202F4C7A005A5AC6 /* UICollectionView.swift in Sources */,
 				27AF6C64202E014200F208DA /* AppDelegate.swift in Sources */,
 				27AF6C7D202E055100F208DA /* RootViewController.swift in Sources */,
 				27C4580D202F55E4005A5AC6 /* Person.swift in Sources */,
-				27C457FC202F3DF8005A5AC6 /* UITableViewExtension.swift in Sources */,
-				278810F6202E27C300064363 /* UIColorExtension.swift in Sources */,
+				27C457FC202F3DF8005A5AC6 /* UITableView.swift in Sources */,
+				278810F6202E27C300064363 /* UIColor.swift in Sources */,
 				27C45818202F777F005A5AC6 /* PeoplePage.swift in Sources */,
 				27C457ED202F3646005A5AC6 /* StarWarsAPI.swift in Sources */,
-				27437257202E7949003855A7 /* UIViewControllerExtension.swift in Sources */,
+				27437257202E7949003855A7 /* UIViewController.swift in Sources */,
 				27C4580B202F5510005A5AC6 /* PersonCellViewModel.swift in Sources */,
 				27E5875F202E5ED7003E3138 /* ReachabilityProtocol.swift in Sources */,
 				27437255202E7917003855A7 /* FadeTransition.swift in Sources */,
@@ -632,7 +632,7 @@
 				27C45824202F98EA005A5AC6 /* AboutCellViewModel.swift in Sources */,
 				27C45816202F57FF005A5AC6 /* PeopleViewModel.swift in Sources */,
 				27E58764202E6E49003E3138 /* NoConnectivityViewViewModel.swift in Sources */,
-				27C45800202F3E72005A5AC6 /* UITableViewCellExtension.swift in Sources */,
+				27C45800202F3E72005A5AC6 /* UITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ import RxSwift
 protocol StarWarsNetworkProtocol {
     func getStarWarsPersonInformation(with identifier: String) -> Observable<Data>
     func getStarWarsPeople(with identifier: String) -> Observable<Data>
+    func getSpeciesInformation(with identifier: String) -> Observable<Data>
 }
 
 struct StarWarsNetwork: StarWarsNetworkProtocol {
@@ -42,6 +43,16 @@ struct StarWarsNetwork: StarWarsNetworkProtocol {
     func getStarWarsPeople(with identifier: String) -> Observable<Data> {
         return provider.rx
             .request(.getPeoplePage(number: identifier))
+            .debug()
+            .filterSuccessfulStatusCodes()
+            .retry(3)
+            .map { $0.data }
+            .asObservable()
+    }
+    
+    func getSpeciesInformation(with identifier: String) -> Observable<Data> {
+        return provider.rx
+            .request(.getSpecies(id: identifier))
             .debug()
             .filterSuccessfulStatusCodes()
             .retry(3)

@@ -25,10 +25,6 @@ class PeopleViewModel: PeopleViewModelRepresentable {
     
     private let disposeBag = DisposeBag()
     
-    // MARK: - People Data
-    
-    private var peopleData: [PersonCellViewModelRepresentable]?
-    
     // MARK: - Data Source
     
     var dataSource: Observable<[PersonCellViewModelRepresentable]>
@@ -37,17 +33,19 @@ class PeopleViewModel: PeopleViewModelRepresentable {
     
     init(dataDependencies: DependenciesList) {
         self.dataDependencies = dataDependencies
-        self.peopleData = [PersonCellViewModelRepresentable]()
         
         dataSource = PeopleViewModel.fetchStarWarsPeople(with: "1", dataDependency: dataDependencies).map {
             $0.results.map {
-                $0.map(PersonCellViewModel.init)
+                $0.map {
+                    PersonCellViewModel(person: $0, dataDependencies: DataDependencies())
+                }
                 }!
         }
     }
     
+    // MARK: - Networking
+    
     static private func fetchStarWarsPeople(with page: String, dataDependency: DependenciesList) -> Observable<PeoplePage> {
-        
         let jsonDecoder = JSONDecoder()
         
         let peoplePage = fetchStarWarsPeoplePage(with: page, dataDependency: dataDependency).map {
