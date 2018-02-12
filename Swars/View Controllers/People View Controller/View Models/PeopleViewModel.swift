@@ -15,16 +15,24 @@ protocol PeopleViewModelRepresentable {
     var didReachEnd: Variable<Bool> { get }
     
     var isLoading: Bool { get }
-    func isReadyToLoad()
+    func fetchNextPeoplePage()
 }
 
 class PeopleViewModel: PeopleViewModelRepresentable {
     
+    // MARK: -
+    
     private var actualPage = 1
+    
+    // MARK: -
     
     private var count: Int?
     
+    // MARK: -
+    
     var didReachEnd = Variable<Bool>(false)
+    
+    // MARK: -
     
     var isLoading = false
     
@@ -83,7 +91,7 @@ class PeopleViewModel: PeopleViewModelRepresentable {
         return dataDependency.networkService.getStarWarsPeople(with: page)
     }
     
-    func isReadyToLoad() {
+    func fetchNextPeoplePage() {
         guard let count = count, count != dataSource.value.count, let dataDependency = self.dataDependencies else {
             didReachEnd.value = true
             return

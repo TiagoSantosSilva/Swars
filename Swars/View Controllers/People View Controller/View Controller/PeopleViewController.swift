@@ -20,7 +20,9 @@ class PeopleViewController: BaseViewController {
         }
     }
     
-    var spinner: UIView!
+    // MARK: - Activity Indicator UI View
+    
+    var activityIndicatorUIView: UIView!
     
     // MARK: - Properties
     
@@ -47,21 +49,43 @@ class PeopleViewController: BaseViewController {
         title = viewControllerTitle
     }
     
-    // MARK: - Setup View Model
+    // MARK: - Setups
+    
     override func setupViewModel() {
         super.setupViewModel()
         viewModel = PeopleViewModel(dataDependencies: DataDependencies())
         
-        // TODO: - Make the Collection View only visible after this is finished.
-        
-        spinner = UIViewController.displayActivityIndicatorView(onView: self.view)
+        displayActivityIndicatorView()
+        handleDataSource()
+    }
+}
+
+extension PeopleViewController: UICollectionViewDelegate {
+    
+}
+
+extension PeopleViewController {
+    func handleDataSource() {
         let sharedDataSource = viewModel.dataSource.asObservable().share()
-        
+        subscribeToViewModelDataSource(with: sharedDataSource)
+        bindItemsToCollectionView(with: sharedDataSource)
+        subscribeToPagination()
+        setCollectionViewCellSelectionHandler()
+        subscribeToDataSourceEndReaching()
+    }
+    
+    internal func displayActivityIndicatorView() {
+        activityIndicatorUIView = UIViewController.displayActivityIndicatorView(onView: self.view)
+    }
+    
+    internal func subscribeToViewModelDataSource(with sharedDataSource: Observable<[PersonCellViewModelRepresentable]>) {
         sharedDataSource.subscribe(onNext: { [weak self] _ in
-            guard let spinner = self?.spinner else { return }
-            UIViewController.removeActivityIndicatorView(activityIndicatorView: spinner)
+            guard let activityIndicatorUIView = self?.activityIndicatorUIView else { return }
+            UIViewController.removeActivityIndicatorView(activityIndicatorView: activityIndicatorUIView)
         })
-        
+    }
+    
+    internal func bindItemsToCollectionView(with sharedDataSource: Observable<[PersonCellViewModelRepresentable]>) {
         sharedDataSource.catchError { error in
             print(error)
             return Observable.empty()
@@ -70,33 +94,35 @@ class PeopleViewController: BaseViewController {
                 cell.configure(with: model)
             }
             .disposed(by: disposeBag)
-        
+    }
+    
+    internal func subscribeToPagination() {
         collectionView.rxNextPageTrigger.subscribe(onNext: { [weak self] in
             guard let `self` = self else { return }
             if $0, !self.viewModel.isLoading, !self.viewModel.didReachEnd.value {
-                self.spinner = UIViewController.displayActivityIndicatorView(onView: self.view)
-                self.viewModel.isReadyToLoad()
+                self.activityIndicatorUIView = UIViewController.displayActivityIndicatorView(onView: self.view)
+                self.viewModel.fetchNextPeoplePage()
             }
         }).disposed(by: disposeBag)
-        
+    }
+    
+    internal func setCollectionViewCellSelectionHandler() {
         collectionView.rx.modelSelected(PersonCellViewModel.self)
             .subscribe(onNext: { value in
                 let personDetailsViewController = PersonDetailsViewController(personIdentifier: value.personId, dataDependencies: DataDependencies())
                 self.navigationController?.pushViewController(personDetailsViewController, animated: true)
             })
             .disposed(by: disposeBag)
-        
+    }
+    
+    internal func subscribeToDataSourceEndReaching() {
         viewModel.didReachEnd.asObservable().subscribe(onNext: { [weak self] in
             if $0 {
                 guard let `self` = self else { return }
-                UIViewController.removeActivityIndicatorView(activityIndicatorView: self.spinner)
+                UIViewController.removeActivityIndicatorView(activityIndicatorView: self.activityIndicatorUIView)
             }
         }).disposed(by: disposeBag)
     }
-}
-
-extension PeopleViewController: UICollectionViewDelegate {
-    
 }
 
 
