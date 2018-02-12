@@ -12,7 +12,7 @@ The application has two main views: Star Wars People and About.
 
 This view displays a Collection View with the Star Wars characters being displayed in each cell. These contain the characters’ names, vehicle count and species.
 
--> Image <-
+![Star Wars People](https://github.com/TiagoSantosSilva/Swars/blob/master/Screenshots/StarWarsPeople.png)
 
 #### Details
 
