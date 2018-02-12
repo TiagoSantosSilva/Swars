@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 extension UICollectionView {
     
@@ -21,5 +22,15 @@ extension UICollectionView {
         }
         
         return cell
+    }
+}
+
+extension UICollectionView {
+    var rxNextPageTrigger: Observable<Bool> {
+        return self.rx.contentOffset.flatMapLatest { [weak self] (offset) -> Observable<Bool> in
+            let shouldTrigger = offset.y + (self?.frame.size.height ?? 0) + 40 > (self?.contentSize.height ?? 0)
+            
+            return shouldTrigger ? Observable.just(true) : Observable.just(false)
+        }
     }
 }

@@ -16,24 +16,24 @@ extension UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
-    class func displaySpinner(onView: UIView) -> UIView {
-        let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = UIColor.init(red: 13/255, green: 13/255, blue: 13/275, alpha: 0.4)
-        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
-        ai.startAnimating()
-        ai.center = spinnerView.center
-        spinnerView.addSubview(ai)
-        onView.addSubview(spinnerView)
+    class func displayActivityIndicatorView(onView: UIView) -> UIView {
+        let activityIndicatorView = UIView.init(frame: onView.bounds)
+        activityIndicatorView.backgroundColor = UIColor.init(red: 13/255, green: 13/255, blue: 13/275, alpha: 0.4)
+        let activityIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        activityIndicator.startAnimating()
+        activityIndicator.center = activityIndicatorView.center
+        activityIndicatorView.addSubview(activityIndicator)
+        onView.addSubview(activityIndicatorView)
         
-        return spinnerView
+        return activityIndicatorView
     }
     
-    class func removeSpinner(spinner: UIView) {
+    class func removeActivityIndicatorView(activityIndicatorView: UIView) {
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.7, animations: {
-                spinner.alpha = 0
+                activityIndicatorView.alpha = 0
             }, completion: {_ in
-                spinner.removeFromSuperview()
+                activityIndicatorView.removeFromSuperview()
             })
         }
     }

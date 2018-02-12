@@ -87,3 +87,14 @@ extension AboutViewController: UITableViewDataSource, UITableViewDelegate {
         view.textLabel?.font = UIFont(name: "AvenirNext-Bold", size: 20)
     }
 }
+
+extension AboutViewController {
+    @IBAction func githubButtonWasTapped(_ sender: Any) {
+        browseToDevelopersGithub()
+    }
+    
+    func browseToDevelopersGithub() {
+        guard let url = URL(string: ExternalURLS.developerGithubURL) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+}

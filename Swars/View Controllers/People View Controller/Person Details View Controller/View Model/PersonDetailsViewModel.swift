@@ -76,7 +76,7 @@ class PersonDetailsViewModel: PersonDetailsViewModelRepresentable {
         guard let person = person else { return }
         guard let homeWorldIdentifier = person.homeworld?.identifierFromUrl else { return }
         
-        dataManager?.getData(endpoint: "\(StarWarsEndpoints.planetUrl)\(homeWorldIdentifier)", Planet.self, completion: { (result, error) in
+        dataManager?.getData(endpoint: "\(StarWarsEndpoints.planetEndpoint)\(homeWorldIdentifier)", Planet.self, completion: { (result, error) in
             guard error == nil else {
                 return
             }
@@ -100,7 +100,7 @@ class PersonDetailsViewModel: PersonDetailsViewModelRepresentable {
             dispatchGroup.enter()
             guard let vehicleIdentifier = vehicleUrl.identifierFromUrl else { return }
             
-            dataManager?.getData(endpoint: "\(StarWarsEndpoints.vehicleUrl)\(vehicleIdentifier)", Vehicle.self, completion: { (result, error) in
+            dataManager?.getData(endpoint: "\(StarWarsEndpoints.vehicleEndpoint)\(vehicleIdentifier)", Vehicle.self, completion: { (result, error) in
                 guard error == nil else {
                     return
                 }

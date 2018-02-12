@@ -26,4 +26,8 @@ extension String {
         guard let id = urlWithoutLastBar.components(separatedBy: "/").last else { return nil }
         return id
     }
+    
+    var asGoogleSearchQuery: String {
+        return self.replacingOccurrences(of: " ", with: "+")
+    }
 }

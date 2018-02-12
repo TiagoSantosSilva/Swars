@@ -81,12 +81,6 @@ class PersonDetailsViewController: BaseViewController {
         setupDelegates()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        vehicleTableView.frame = CGRect(x: vehicleTableView.frame.origin.x, y: vehicleTableView.frame.origin.y, width: vehicleTableView.frame.size.width, height: vehicleTableView.contentSize.height)
-        vehicleTableView.reloadData()
-    }
-    
     // MARK: - Setups
     
     override func setupView() {
@@ -109,7 +103,7 @@ class PersonDetailsViewController: BaseViewController {
     
     func fetchPersonData() {
         guard let personIdentifier = personIdentifier else { return }
-        dataManager.getData(endpoint: "\(StarWarsEndpoints.personUrl)\(personIdentifier)", Person.self) { (result, error) in
+        dataManager.getData(endpoint: "\(StarWarsEndpoints.personEndpoint)\(personIdentifier)", Person.self) { (result, error) in
             guard error == nil else {
                 return
             }
@@ -162,6 +156,10 @@ extension PersonDetailsViewController: PersonDetailsViewControllerDelegate {
             skinColorLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         case "light":
             skinColorLabel.textColor = #colorLiteral(red: 0.9876733422, green: 0.9980342984, blue: 0.8046858311, alpha: 1)
+        case "green":
+            skinColorLabel.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        case "pale":
+            skinColorLabel.textColor = #colorLiteral(red: 1, green: 0.8505931497, blue: 0.7524437308, alpha: 1)
         default:
             skinColorLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
@@ -231,6 +229,13 @@ extension PersonDetailsViewController {
 
 extension PersonDetailsViewController {
     @IBAction func googleButtonWasTapped(_ sender: Any) {
-        UIApplication.shared.openURL(URL(string: "http://www.google.com")!)
+        searchPersonOnGoogle()
+    }
+    
+    func searchPersonOnGoogle() {
+        guard let personName = personDetailsViewModel?.name else { return }
+        let personNameAsSearchQuery = personName.asGoogleSearchQuery
+        guard let url = URL(string: "\(ExternalURLS.googleURL)\(personNameAsSearchQuery)") else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }

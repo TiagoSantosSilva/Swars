@@ -10,6 +10,7 @@
 		27437255202E7917003855A7 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437254202E7917003855A7 /* FadeTransition.swift */; };
 		27437257202E7949003855A7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437256202E7949003855A7 /* UIViewController.swift */; };
 		274BB1C6202FB0520085E868 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BB1C5202FB0520085E868 /* Species.swift */; };
+		27715DE92031228E00FC4686 /* ExternalURLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27715DE82031228E00FC4686 /* ExternalURLS.swift */; };
 		27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27798060202E55F80085CFDF /* NoConnectivityViewController.swift */; };
 		27798063202E55F80085CFDF /* NoConnectivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27798061202E55F80085CFDF /* NoConnectivityViewController.xib */; };
 		278810F3202E0AA500064363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F2202E0AA500064363 /* BaseViewController.swift */; };
@@ -63,6 +64,7 @@
 		27437254202E7917003855A7 /* FadeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		27437256202E7949003855A7 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		274BB1C5202FB0520085E868 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		27715DE82031228E00FC4686 /* ExternalURLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalURLS.swift; sourceTree = "<group>"; };
 		27798060202E55F80085CFDF /* NoConnectivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectivityViewController.swift; sourceTree = "<group>"; };
 		27798061202E55F80085CFDF /* NoConnectivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoConnectivityViewController.xib; sourceTree = "<group>"; };
 		278810F2202E0AA500064363 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */,
 				27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */,
 				27B27F0A203085E6005DDEB6 /* StarWarsDataManager.swift */,
+				27715DE82031228E00FC4686 /* ExternalURLS.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				278810FA202E2C7300064363 /* NavigationController.swift in Sources */,
 				27C45802202F4C7A005A5AC6 /* UICollectionView.swift in Sources */,
 				27AF6C64202E014200F208DA /* AppDelegate.swift in Sources */,
+				27715DE92031228E00FC4686 /* ExternalURLS.swift in Sources */,
 				27AF6C7D202E055100F208DA /* RootViewController.swift in Sources */,
 				27C4580D202F55E4005A5AC6 /* Person.swift in Sources */,
 				27C457FC202F3DF8005A5AC6 /* UITableView.swift in Sources */,

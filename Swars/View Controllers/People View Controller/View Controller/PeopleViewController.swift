@@ -54,12 +54,12 @@ class PeopleViewController: BaseViewController {
         
         // TODO: - Make the Collection View only visible after this is finished.
         
-        spinner = UIViewController.displaySpinner(onView: self.view)
+        spinner = UIViewController.displayActivityIndicatorView(onView: self.view)
         let sharedDataSource = viewModel.dataSource.asObservable().share()
         
         sharedDataSource.subscribe(onNext: { [weak self] _ in
             guard let spinner = self?.spinner else { return }
-            UIViewController.removeSpinner(spinner: spinner)
+            UIViewController.removeActivityIndicatorView(activityIndicatorView: spinner)
         })
         
         sharedDataSource.catchError { error in
@@ -74,7 +74,7 @@ class PeopleViewController: BaseViewController {
         collectionView.rxNextPageTrigger.subscribe(onNext: { [weak self] in
             guard let `self` = self else { return }
             if $0, !self.viewModel.isLoading, !self.viewModel.didReachEnd.value {
-                self.spinner = UIViewController.displaySpinner(onView: self.view)
+                self.spinner = UIViewController.displayActivityIndicatorView(onView: self.view)
                 self.viewModel.isReadyToLoad()
             }
         }).disposed(by: disposeBag)
@@ -89,7 +89,7 @@ class PeopleViewController: BaseViewController {
         viewModel.didReachEnd.asObservable().subscribe(onNext: { [weak self] in
             if $0 {
                 guard let `self` = self else { return }
-                UIViewController.removeSpinner(spinner: self.spinner)
+                UIViewController.removeActivityIndicatorView(activityIndicatorView: self.spinner)
             }
         }).disposed(by: disposeBag)
     }
@@ -99,13 +99,4 @@ extension PeopleViewController: UICollectionViewDelegate {
     
 }
 
-extension UICollectionView {
-    var rxNextPageTrigger: Observable<Bool> {
-        return self.rx.contentOffset.flatMapLatest { [weak self] (offset) -> Observable<Bool> in
-            let shouldTrigger = offset.y + (self?.frame.size.height ?? 0) + 40 > (self?.contentSize.height ?? 0)
-            
-            return shouldTrigger ? Observable.just(true) : Observable.just(false)
-        }
-    }
-}
 

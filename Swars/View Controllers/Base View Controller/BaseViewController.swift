@@ -21,6 +21,10 @@ class BaseViewController: UIViewController {
         return .lightContent
     }
     
+    // MARK: - Background Image View
+    
+    private var backgroundImageView: UIImageView!
+    
     // MARK: - Reachability Property
     
     private let reachability = Reachability()!

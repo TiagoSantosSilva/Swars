@@ -21,6 +21,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-Se-dBR">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                </imageView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ETc-wY-jaR">
                     <rect key="frame" x="20" y="64" width="335" height="694"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -35,11 +38,19 @@
             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ETc-wY-jaR" secondAttribute="trailing" constant="20" id="MTy-Ag-Fij"/>
+                <constraint firstItem="pbA-Se-dBR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="OAE-PE-7yW"/>
                 <constraint firstItem="ETc-wY-jaR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Tok-OA-9ot"/>
                 <constraint firstItem="ETc-wY-jaR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="UB1-9V-RPP"/>
+                <constraint firstItem="pbA-Se-dBR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="frg-A6-Tl2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ETc-wY-jaR" secondAttribute="bottom" constant="20" id="jrk-ah-YpU"/>
+                <constraint firstItem="pbA-Se-dBR" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="lMi-Ne-cNx"/>
+                <constraint firstItem="pbA-Se-dBR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oGw-Vs-Wua"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="52"/>
         </view>
     </objects>
+    <resources>
+        <image name="background2" width="1920" height="1080"/>
+    </resources>
 </document>

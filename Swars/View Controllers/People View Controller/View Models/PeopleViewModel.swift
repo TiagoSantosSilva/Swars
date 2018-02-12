@@ -79,18 +79,6 @@ class PeopleViewModel: PeopleViewModelRepresentable {
         return peoplePage
     }
     
-    static private func fetchStarWarsPeople2(with page: String, dataDependency: DependenciesList) -> Observable<PeoplePage> {
-        let jsonDecoder = JSONDecoder()
-        
-        let peoplePage = fetchStarWarsPeoplePage(with: page, dataDependency: dataDependency).map {
-            return try jsonDecoder.decode(PeoplePage.self, from: $0)
-            }.subscribe(onNext: {
-                print($0)
-            })
-        
-        return Observable<PeoplePage>.empty()
-    }
-    
     static private func fetchStarWarsPeoplePage(with page: String, dataDependency: DependenciesList) -> Observable<Data> {
         return dataDependency.networkService.getStarWarsPeople(with: page)
     }

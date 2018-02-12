@@ -10,9 +10,9 @@ import Foundation
 import Moya
 
 struct StarWarsEndpoints {
-    static let vehicleUrl = "vehicles/"
-    static let personUrl = "people/"
-    static let planetUrl = "planets/"
+    static let vehicleEndpoint = "vehicles/"
+    static let personEndpoint = "people/"
+    static let planetEndpoint = "planets/"
 }
 
 enum StarWarsAPI {
