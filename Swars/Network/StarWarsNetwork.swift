@@ -37,6 +37,7 @@ struct StarWarsNetwork: StarWarsNetworkProtocol {
             .filterSuccessfulStatusCodes()
             .retry(3)
             .map { $0.data }
+            .debug()
             .asObservable()
     }
     
@@ -47,6 +48,7 @@ struct StarWarsNetwork: StarWarsNetworkProtocol {
             .filterSuccessfulStatusCodes()
             .retry(3)
             .map { $0.data }
+            .debug()
             .asObservable()
     }
     

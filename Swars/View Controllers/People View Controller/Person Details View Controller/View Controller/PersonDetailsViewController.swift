@@ -228,3 +228,9 @@ extension PersonDetailsViewController {
         }
     }
 }
+
+extension PersonDetailsViewController {
+    @IBAction func googleButtonWasTapped(_ sender: Any) {
+        UIApplication.shared.openURL(URL(string: "http://www.google.com")!)
+    }
+}

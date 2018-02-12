@@ -20,6 +20,8 @@ class PeopleViewController: BaseViewController {
         }
     }
     
+    var spinner: UIView!
+    
     // MARK: - Properties
     
     private let viewControllerTitle = "Star Wars People"
@@ -52,7 +54,15 @@ class PeopleViewController: BaseViewController {
         
         // TODO: - Make the Collection View only visible after this is finished.
         
-        viewModel.dataSource.catchError { error in
+        spinner = UIViewController.displaySpinner(onView: self.view)
+        let sharedDataSource = viewModel.dataSource.asObservable().share()
+        
+        sharedDataSource.subscribe(onNext: { [weak self] _ in
+            guard let spinner = self?.spinner else { return }
+            UIViewController.removeSpinner(spinner: spinner)
+        })
+        
+        sharedDataSource.catchError { error in
             print(error)
             return Observable.empty()
             }
@@ -61,15 +71,41 @@ class PeopleViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
+        collectionView.rxNextPageTrigger.subscribe(onNext: { [weak self] in
+            guard let `self` = self else { return }
+            if $0, !self.viewModel.isLoading, !self.viewModel.didReachEnd.value {
+                self.spinner = UIViewController.displaySpinner(onView: self.view)
+                self.viewModel.isReadyToLoad()
+            }
+        }).disposed(by: disposeBag)
+        
         collectionView.rx.modelSelected(PersonCellViewModel.self)
             .subscribe(onNext: { value in
                 let personDetailsViewController = PersonDetailsViewController(personIdentifier: value.personId, dataDependencies: DataDependencies())
                 self.navigationController?.pushViewController(personDetailsViewController, animated: true)
             })
-        .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
+        
+        viewModel.didReachEnd.asObservable().subscribe(onNext: { [weak self] in
+            if $0 {
+                guard let `self` = self else { return }
+                UIViewController.removeSpinner(spinner: self.spinner)
+            }
+        }).disposed(by: disposeBag)
     }
 }
 
 extension PeopleViewController: UICollectionViewDelegate {
-
+    
 }
+
+extension UICollectionView {
+    var rxNextPageTrigger: Observable<Bool> {
+        return self.rx.contentOffset.flatMapLatest { [weak self] (offset) -> Observable<Bool> in
+            let shouldTrigger = offset.y + (self?.frame.size.height ?? 0) + 40 > (self?.contentSize.height ?? 0)
+            
+            return shouldTrigger ? Observable.just(true) : Observable.just(false)
+        }
+    }
+}
+
