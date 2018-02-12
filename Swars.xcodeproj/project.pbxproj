@@ -11,6 +11,7 @@
 		27437257202E7949003855A7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27437256202E7949003855A7 /* UIViewController.swift */; };
 		274BB1C6202FB0520085E868 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BB1C5202FB0520085E868 /* Species.swift */; };
 		27715DE92031228E00FC4686 /* ExternalURLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27715DE82031228E00FC4686 /* ExternalURLS.swift */; };
+		27715DEC2031319600FC4686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27715DEB2031319600FC4686 /* LaunchScreen.storyboard */; };
 		27798062202E55F80085CFDF /* NoConnectivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27798060202E55F80085CFDF /* NoConnectivityViewController.swift */; };
 		27798063202E55F80085CFDF /* NoConnectivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27798061202E55F80085CFDF /* NoConnectivityViewController.xib */; };
 		278810F3202E0AA500064363 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278810F2202E0AA500064363 /* BaseViewController.swift */; };
@@ -65,6 +66,7 @@
 		27437256202E7949003855A7 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		274BB1C5202FB0520085E868 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		27715DE82031228E00FC4686 /* ExternalURLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalURLS.swift; sourceTree = "<group>"; };
+		27715DEB2031319600FC4686 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27798060202E55F80085CFDF /* NoConnectivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectivityViewController.swift; sourceTree = "<group>"; };
 		27798061202E55F80085CFDF /* NoConnectivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoConnectivityViewController.xib; sourceTree = "<group>"; };
 		278810F2202E0AA500064363 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -163,11 +165,36 @@
 			path = Transitions;
 			sourceTree = "<group>";
 		};
-		27715DE22030CE1700FC4686 /* Cells */ = {
+		27715DEA2031318400FC4686 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				27715DEB2031319600FC4686 /* LaunchScreen.storyboard */,
 			);
-			path = Cells;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		27715DED2031346800FC4686 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				278810F2202E0AA500064363 /* BaseViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27715DEE2031349200FC4686 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27AF6C7B202E055100F208DA /* RootViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27715DEF2031349800FC4686 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				27AF6C7C202E055100F208DA /* RootViewController.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		2779805F202E55D70085CFDF /* No Connectivity View Controller */ = {
@@ -190,8 +217,8 @@
 		278810F1202E0A9300064363 /* Base View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27715DED2031346800FC4686 /* View Controller */,
 				27E58765202E7263003E3138 /* View Models */,
-				278810F2202E0AA500064363 /* BaseViewController.swift */,
 			);
 			path = "Base View Controller";
 			sourceTree = "<group>";
@@ -240,6 +267,7 @@
 				27C457EB202F3635005A5AC6 /* Network */,
 				27E5875D202E5EC9003E3138 /* Protocols */,
 				278810F0202E09F900064363 /* Resources */,
+				27715DEA2031318400FC4686 /* Storyboards */,
 				27AF6C7A202E04B200F208DA /* Supporting Files */,
 				27AF6C79202E04A800F208DA /* View Controllers */,
 			);
@@ -257,11 +285,11 @@
 		27AF6C78202E04A400F208DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				27C4580C202F55E4005A5AC6 /* Person.swift */,
 				27C45817202F777F005A5AC6 /* PeoplePage.swift */,
+				27C4580C202F55E4005A5AC6 /* Person.swift */,
+				27B27F0E20309518005DDEB6 /* Planet.swift */,
 				274BB1C5202FB0520085E868 /* Species.swift */,
 				27B27F0820308346005DDEB6 /* Vehicle.swift */,
-				27B27F0E20309518005DDEB6 /* Planet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,9 +297,9 @@
 		27AF6C79202E04A800F208DA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2779805F202E55D70085CFDF /* No Connectivity View Controller */,
-				278810F1202E0A9300064363 /* Base View Controller */,
 				27AF6C81202E06EA00F208DA /* About View Controller */,
+				278810F1202E0A9300064363 /* Base View Controller */,
+				2779805F202E55D70085CFDF /* No Connectivity View Controller */,
 				27AF6C80202E06E100F208DA /* People View Controller */,
 				27AF6C7F202E056200F208DA /* RootViewController */,
 			);
@@ -289,8 +317,8 @@
 		27AF6C7F202E056200F208DA /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				27AF6C7B202E055100F208DA /* RootViewController.swift */,
-				27AF6C7C202E055100F208DA /* RootViewController.xib */,
+				27715DEE2031349200FC4686 /* View Controller */,
+				27715DEF2031349800FC4686 /* XIB */,
 			);
 			path = RootViewController;
 			sourceTree = "<group>";
@@ -310,11 +338,11 @@
 		27AF6C81202E06EA00F208DA /* About View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				27C45827202F99B5005A5AC6 /* XIB */,
-				27C45826202F99B0005A5AC6 /* View Controller */,
-				27C45825202F999B005A5AC6 /* View Models */,
 				27C4581E202F974D005A5AC6 /* About Cell */,
 				27C4581B202F902C005A5AC6 /* Profile Image */,
+				27C45826202F99B0005A5AC6 /* View Controller */,
+				27C45825202F999B005A5AC6 /* View Models */,
+				27C45827202F99B5005A5AC6 /* XIB */,
 			);
 			path = "About View Controller";
 			sourceTree = "<group>";
@@ -322,7 +350,6 @@
 		27B27EFE20307FE9005DDEB6 /* Person Details View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				27715DE22030CE1700FC4686 /* Cells */,
 				27B27F002030801C005DDEB6 /* View Controller */,
 				27B27EFF20308016005DDEB6 /* View Model */,
 				27B27F0120308023005DDEB6 /* XIB */,
@@ -357,11 +384,11 @@
 		27C457EB202F3635005A5AC6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */,
-				27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */,
 				27C457F2202F3BF7005A5AC6 /* DataDependencies.swift */,
-				27B27F0A203085E6005DDEB6 /* StarWarsDataManager.swift */,
 				27715DE82031228E00FC4686 /* ExternalURLS.swift */,
+				27C457EC202F3646005A5AC6 /* StarWarsAPI.swift */,
+				27B27F0A203085E6005DDEB6 /* StarWarsDataManager.swift */,
+				27C457F0202F39B7005A5AC6 /* StarWarsNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -369,8 +396,8 @@
 		27C457F8202F3D5C005A5AC6 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				27C457F9202F3D75005A5AC6 /* Result.swift */,
 				27B27F0C2030860D005DDEB6 /* DataManagerError.swift */,
+				27C457F9202F3D75005A5AC6 /* Result.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -581,6 +608,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27715DEC2031319600FC4686 /* LaunchScreen.storyboard in Resources */,
 				27C45822202F976F005A5AC6 /* AboutCell.xib in Resources */,
 				27AF6C6D202E014200F208DA /* Assets.xcassets in Resources */,
 				27AF6C85202E070100F208DA /* PeopleViewController.xib in Resources */,

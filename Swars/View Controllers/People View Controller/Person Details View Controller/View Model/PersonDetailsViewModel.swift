@@ -64,7 +64,7 @@ class PersonDetailsViewModel: PersonDetailsViewModelRepresentable {
     
     var skinColor: String {
         guard let personSkinColor = person?.skinColor else { return "" }
-        return personSkinColor
+        return personSkinColor.capitalized
     }
     
     // MARK: -

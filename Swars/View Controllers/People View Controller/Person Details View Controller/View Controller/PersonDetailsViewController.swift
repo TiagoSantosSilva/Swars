@@ -148,17 +148,17 @@ extension PersonDetailsViewController: PersonDetailsViewControllerDelegate {
     
     func setSkinColorOutlet(viewModel: PersonDetailsViewModelRepresentable) {
         switch viewModel.skinColor {
-        case "fair":
+        case "Fair":
             skinColorLabel.textColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
-        case "gold":
+        case "Gold":
             skinColorLabel.textColor = #colorLiteral(red: 0.831372549, green: 0.6862745098, blue: 0.2156862745, alpha: 1)
-        case "white":
+        case "White":
             skinColorLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        case "light":
+        case "Light":
             skinColorLabel.textColor = #colorLiteral(red: 0.9876733422, green: 0.9980342984, blue: 0.8046858311, alpha: 1)
-        case "green":
+        case "Green":
             skinColorLabel.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-        case "pale":
+        case "Pale":
             skinColorLabel.textColor = #colorLiteral(red: 1, green: 0.8505931497, blue: 0.7524437308, alpha: 1)
         default:
             skinColorLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
