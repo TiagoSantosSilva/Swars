@@ -18,7 +18,7 @@ This view displays a Collection View with the Star Wars characters being display
 
 Tapping a cell will display the Details View.
 
--> Image <- 
+![Details](https://github.com/TiagoSantosSilva/Swars/blob/master/Screenshots/Details.png)
 
 This view displays the character’s name, home planet, skin colour, gender and vehicle list.
 
@@ -28,7 +28,7 @@ A google button is also displayed. Tapping it will open a Safari Google search o
 
 The About view displays the developer’s name and birthdate.
 
--> Image <-
+![About](https://github.com/TiagoSantosSilva/Swars/blob/master/Screenshots/About.png)
 
 Tapping the GitHub button will open a Safari page directed to the developer’s GitHub page.
 
@@ -36,6 +36,6 @@ Tapping the GitHub button will open a Safari page directed to the developer’s 
 
 If the connection to the Internet is lost, the user will be alerted with the following view.
 
--> Image <- 
+![NoConnection](https://github.com/TiagoSantosSilva/Swars/blob/master/Screenshots/NoConnection.png)
 
 This view will disappear once the connection is reobtained.
