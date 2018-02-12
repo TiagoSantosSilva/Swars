@@ -42,24 +42,32 @@ class PersonDetailsViewModel: PersonDetailsViewModelRepresentable {
         }
     }
     
+    // MARK: -
+    
     var name: String {
         guard let personName = person?.name else { return "" }
         return personName
     }
+    
+    // MARK: -
     
     var gender: String {
         guard let personGender = person?.gender else { return "" }
         return personGender
     }
     
+    // MARK: -
+    
     private(set) var homeWorld: String?
+    
+    // MARK: -
     
     var skinColor: String {
         guard let personSkinColor = person?.skinColor else { return "" }
         return personSkinColor
     }
     
-    // TODO: - Vehicle Model
+    // MARK: -
     
     private(set) var carList: [String]?
     
@@ -96,6 +104,16 @@ class PersonDetailsViewModel: PersonDetailsViewModelRepresentable {
         carList = [String]()
         
         dispatchGroup.enter()
+        
+        fetchVehicles(personVehicles)
+        dispatchGroup.leave()
+        
+        dispatchGroup.notify(queue: .main) {
+            self.delegate?.didFetchCarList()
+        }
+    }
+    
+    private func fetchVehicles(_ personVehicles: [String]) {
         for vehicleUrl in personVehicles {
             dispatchGroup.enter()
             guard let vehicleIdentifier = vehicleUrl.identifierFromUrl else { return }
@@ -116,11 +134,6 @@ class PersonDetailsViewModel: PersonDetailsViewModelRepresentable {
                 self.carList?.append(vehicleName)
                 self.dispatchGroup.leave()
             })
-        }
-        dispatchGroup.leave()
-        
-        dispatchGroup.notify(queue: .main) {
-            self.delegate?.didFetchCarList()
         }
     }
 }
