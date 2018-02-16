@@ -28,8 +28,6 @@ A google button is also displayed. Tapping it will open a Safari Google search o
 
 The About view displays the developer’s name and birthdate.
 
-![About](https://github.com/TiagoSantosSilva/Swars/blob/master/Screenshots/About.png)
-
 Tapping the GitHub button will open a Safari page directed to the developer’s GitHub page.
 
 ##### Extra
